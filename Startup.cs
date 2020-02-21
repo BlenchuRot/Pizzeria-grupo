@@ -10,6 +10,8 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using Pizzeria.Infraestructure;
+using Microsoft.EntityFrameworkCore;
 
 namespace Pizzeria_grupo
 {
@@ -26,6 +28,7 @@ namespace Pizzeria_grupo
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
+            services.AddDbContext<PizzeriaContext>(options => options.UseInMemoryDatabase("Lucia"));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

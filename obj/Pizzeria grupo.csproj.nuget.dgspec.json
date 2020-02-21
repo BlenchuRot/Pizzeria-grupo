@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Curso\\Pizzeria grupo\\Pizzeria grupo.csproj": {}
+    "C:\\curso\\Pizzeria-grupo\\Pizzeria grupo.csproj": {}
   },
   "projects": {
-    "C:\\Curso\\Pizzeria grupo\\Pizzeria grupo.csproj": {
+    "C:\\curso\\Pizzeria-grupo\\Pizzeria grupo.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Curso\\Pizzeria grupo\\Pizzeria grupo.csproj",
+        "projectUniqueName": "C:\\curso\\Pizzeria-grupo\\Pizzeria grupo.csproj",
         "projectName": "Pizzeria grupo",
-        "projectPath": "C:\\Curso\\Pizzeria grupo\\Pizzeria grupo.csproj",
+        "projectPath": "C:\\curso\\Pizzeria-grupo\\Pizzeria grupo.csproj",
         "packagesPath": "C:\\Users\\FundaciónOnce\\.nuget\\packages\\",
-        "outputPath": "C:\\Curso\\Pizzeria grupo\\obj\\",
+        "outputPath": "C:\\curso\\Pizzeria-grupo\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\FundaciónOnce\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -35,6 +35,16 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[3.1.2, )"
+            },
+            "Microsoft.EntityFrameworkCore.InMemory": {
+              "target": "Package",
+              "version": "[3.1.2, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -53,7 +63,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.100\\RuntimeIdentifierGraph.json"
         }
       }
     }
