@@ -1,5 +1,8 @@
 using Microsoft.EntityFrameworkCore;
 using  Api.Dominio;
+using API.Infraestructure;
+
+
 namespace Pizzeria.Infraestructure {
 
 
@@ -7,6 +10,9 @@ namespace Pizzeria.Infraestructure {
     public DbSet<User> User {get; set;}
    public PizzeriaContext(DbContextOptions<PizzeriaContext> options) : base(options){
    }
-    
+    protected override void OnModelCreating(ModelBuilder modelBuilder)
+    {
+      UserConfiguration.Apply(modelBuilder);
+    } 
  }
 }
