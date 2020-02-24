@@ -19,7 +19,7 @@ namespace API.Infraestructure
               {
                   user.HasKey(user => user.Id);
                   /*creamos el email de usuario como único*/
-                  user.Property(email => email.unique);
+                  user.HasAlternateKey(user => user.Email);
               });
             /*creamos la asociación de el Id a ese usuario como pk*/
 
