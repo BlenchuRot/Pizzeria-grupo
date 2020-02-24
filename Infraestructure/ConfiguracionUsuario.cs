@@ -15,9 +15,14 @@ namespace API.Infraestructure
               asociación de la pk a ese usuario*/
             modelBuilder
             /*creamos la entidad usuario para la base de datos*/
-              .Entity<User>()
+              .Entity<User>(user =>
+              {
+                  user.HasKey(user => user.Id);
+                  /*creamos el email de usuario como único*/
+                  user.Property(email => email.unique);
+              });
             /*creamos la asociación de el Id a ese usuario como pk*/
-              .HasKey(user => user.Id);
+
         }
     }
 }
