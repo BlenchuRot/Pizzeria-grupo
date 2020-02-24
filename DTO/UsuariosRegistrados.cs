@@ -1,7 +1,7 @@
 using System;
 using Api.Dominio;
 //se comprueba que todo está bien y se devuelve la información que quiero que se vea al dominio
-namespace Api.RegistroUsuariode
+namespace Api.UsuarioRegistrado
 {
     public class UserRegistered
     {
@@ -21,7 +21,7 @@ namespace Api.RegistroUsuariode
             return userRegistered;
         }
         //propiedades
-         public Guid Id { get; set; }
+        public Guid Id { get; set; }
 
         public string Name { get; set; }
 

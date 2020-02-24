@@ -1,5 +1,5 @@
 using Api.RegistroUsuario;
-using Api.RegistroUsuariode;
+using Api.UsuarioRegistrado;
 using API.Infraestructure;
 using Api.Application;
 
