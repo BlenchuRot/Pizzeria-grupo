@@ -1,6 +1,5 @@
 using Microsoft.EntityFrameworkCore;
-using Api.RegistroUsuario;
-using Api.UsuarioRegistrado;
+using Api.Dominio;
 
 namespace API.Infraestructure
 {

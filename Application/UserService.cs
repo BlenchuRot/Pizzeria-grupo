@@ -2,6 +2,7 @@ using Api.RegistroUsuario;
 using Api.UsuarioRegistrado;
 using API.Infraestructure;
 using Api.Application;
+using Api.Dominio;
 
 namespace Api.Application
 {
