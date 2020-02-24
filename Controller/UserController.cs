@@ -1,32 +1,9 @@
-<<<<<<< HEAD
-using Api.RegistroUsuario;
-using Api.RegistroUsuariode;
-using API.Infraestructure;
-using Api.Application;
-
-namespace Api.Application
-{
-    class UserService : BaseService, IUserService
-    {
-        private readonly IUserContext _context;
-        public UserService(IUserContext context) : base(context)
-        {
-            _context = context;
-        }
-
-        public UserRegistered Register(UserRegistration userRegistration)
-        {
-            var user = User.Create(userRegistration);
-            _context.User.Add(user);
-            _context.SaveChanges();
-            return UserRegistered.Create(user);
-=======
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
-using Api.Dominio;
+using API.Application;
 using Api.RegistroUsuariode;
 
-namespace Api.ControladorUsuario
+namespace API.Controllers
 {
     [ApiController]
     [Route("[controller]")]
@@ -49,7 +26,6 @@ namespace Api.ControladorUsuario
             UserRegistered userRegistered = _userService.Register(userRegistration);
             // TODO: return Created
             return Ok(userRegistered);
->>>>>>> 61e19685840607a8c7127871aa8380010e25b183
         }
     }
 }
