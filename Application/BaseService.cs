@@ -3,6 +3,7 @@ using System;
 using Api.Application;
 
 namespace Api.Application
+
 {
     class BaseService : IDisposable
     {
