@@ -1,7 +1,8 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
-using API.Application;
+using Api.Application;
 using Api.RegistroUsuariode;
+using Api.RegistroUsuario;
 
 namespace API.Controllers
 {

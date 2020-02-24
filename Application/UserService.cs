@@ -15,3 +15,10 @@ namespace Api.Application
 
         public UserRegistered Register(UserRegistration userRegistration)
         {
+            var user = User.Create(userRegistration);
+            _context.User.Add(user);
+            _context.SaveChanges();
+            return UserRegistered.Create(user);
+        }
+    }
+}
