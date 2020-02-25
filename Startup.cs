@@ -12,6 +12,7 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Pizzeria.Infraestructure;
 using Microsoft.EntityFrameworkCore;
+using Pizzeria.Application;
 
 namespace Pizzeria
 {
@@ -27,6 +28,7 @@ namespace Pizzeria
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddScoped(typeof(UserService), typeof(UserService));
             services.AddControllers();
             services.AddDbContext<PizzeriaContext>(options => options.UseInMemoryDatabase("Lucia"));
         }

@@ -24,8 +24,8 @@ namespace Pizzeria.Controllers
                 return BadRequest(ModelState);
             }
             UserRegistered userRegistered = _userService.Register(userRegistration);
-            // TODO: return Created
-            return Ok(userRegistered);
+            //return Created;
+           return StatusCode(201, userRegistered);
         }
     }
 }
