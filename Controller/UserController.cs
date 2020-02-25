@@ -23,6 +23,9 @@ namespace Pizzeria.Controllers
             {
                 return BadRequest(ModelState);
             }
+            //Generar un .log que nos devuelva "Hola".
+            _logger.LogCritical("Hola");
+
             UserRegistered userRegistered = _userService.Register(userRegistration);
             // TODO: return Created
             return Ok(userRegistered);
