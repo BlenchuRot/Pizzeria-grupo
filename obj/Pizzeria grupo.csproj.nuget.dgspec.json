@@ -1,15 +1,15 @@
 {
   "format": 1,
   "restore": {
-    "C:\\curso\\clonado\\Pizzeria-grupo-10\\Pizzeria grupo.csproj": {}
+    "C:\\curso\\clonado\\Pizzeria-10\\Pizzeria.csproj": {}
   },
   "projects": {
-    "C:\\curso\\clonado\\Pizzeria-grupo-10\\Pizzeria grupo.csproj": {
+    "C:\\curso\\clonado\\Pizzeria-10\\Pizzeria.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\curso\\clonado\\Pizzeria-grupo-10\\Pizzeria grupo.csproj",
+        "projectUniqueName": "C:\\curso\\clonado\\Pizzeria-10\\Pizzeria.csproj",
         "projectName": "Pizzeria grupo",
-        "projectPath": "C:\\curso\\clonado\\Pizzeria-grupo-10\\Pizzeria grupo.csproj",
+        "projectPath": "C:\\curso\\clonado\\Pizzeria-grupo-10\\Pizzeria.csproj",
         "packagesPath": "C:\\Users\\FundaciónOnce\\.nuget\\packages\\",
         "outputPath": "C:\\curso\\clonado\\Pizzeria-grupo-10\\obj\\",
         "projectStyle": "PackageReference",
