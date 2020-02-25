@@ -1,7 +1,7 @@
-using Api.Dominio;
+using Pizzeria.Dominio;
 using Microsoft.EntityFrameworkCore;
 
-namespace API.Infraestructure
+namespace Pizzeria.Infraestructure
 {
     //creamos una clase para configurar un usuario
     public class UserConfiguration

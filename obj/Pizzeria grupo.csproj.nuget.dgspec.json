@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Curso\\Pizzeria-grupo-master\\Pizzeria-grupo\\Pizzeria grupo.csproj": {}
+    "C:\\curso\\clonado\\Pizzeria-grupo-10\\Pizzeria grupo.csproj": {}
   },
   "projects": {
-    "C:\\Curso\\Pizzeria-grupo-master\\Pizzeria-grupo\\Pizzeria grupo.csproj": {
+    "C:\\curso\\clonado\\Pizzeria-grupo-10\\Pizzeria grupo.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Curso\\Pizzeria-grupo-master\\Pizzeria-grupo\\Pizzeria grupo.csproj",
+        "projectUniqueName": "C:\\curso\\clonado\\Pizzeria-grupo-10\\Pizzeria grupo.csproj",
         "projectName": "Pizzeria grupo",
-        "projectPath": "C:\\Curso\\Pizzeria-grupo-master\\Pizzeria-grupo\\Pizzeria grupo.csproj",
+        "projectPath": "C:\\curso\\clonado\\Pizzeria-grupo-10\\Pizzeria grupo.csproj",
         "packagesPath": "C:\\Users\\FundaciónOnce\\.nuget\\packages\\",
-        "outputPath": "C:\\Curso\\Pizzeria-grupo-master\\Pizzeria-grupo\\obj\\",
+        "outputPath": "C:\\curso\\clonado\\Pizzeria-grupo-10\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\FundaciónOnce\\AppData\\Roaming\\NuGet\\NuGet.Config"

@@ -1,6 +1,6 @@
 using System.ComponentModel.DataAnnotations;
 
-namespace Api.RegistroUsuario
+namespace Pizzeria.DTO
 {
     //se le pide al usuario su nombre,email y password, para el registro de usuario
     public class UserRegistration

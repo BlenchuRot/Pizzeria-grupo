@@ -1,8 +1,8 @@
 ﻿using System;
-using Api.RegistroUsuario;
+using Pizzeria.DTO;
 
 //Aquí se crea el dominio del usuario
-namespace Api.Dominio
+namespace Pizzeria.Dominio
 {
     //creo la clase usuario para un nuevo usuario
     public class User

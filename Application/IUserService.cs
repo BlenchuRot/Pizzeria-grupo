@@ -1,8 +1,6 @@
-using Api.RegistroUsuario;
-using Api.UsuarioRegistrado;
+using Pizzeria.DTO;
 
-
-namespace Api.Application
+namespace Pizzeria.Application
 {
     public interface IUserService
     {

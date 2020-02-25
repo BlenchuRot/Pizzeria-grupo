@@ -1,25 +1,24 @@
-using Api.RegistroUsuario;
-using Api.UsuarioRegistrado;
-using API.Infraestructure;
-using Api.Application;
-using Api.Dominio;
+using Pizzeria.DTO;
+using Pizzeria.Infraestructure;
+using Pizzeria.Dominio;
 
-namespace Api.Application
+namespace Pizzeria.Application
 {
-    class UserService : BaseService, IUserService
+    class UserService : IUserService
     {
-        private readonly IUserContext _context;
-        public UserService(IUserContext context) : base(context)
+        private readonly PizzeriaContext _context;
+        public UserService(PizzeriaContext context)
         {
             _context = context;
         }
 
         public UserRegistered Register(UserRegistration userRegistration)
         {
-            var user = User.Create(userRegistration);
-            _context.User.Add(user);
-            _context.SaveChanges();
-            return UserRegistered.Create(user);
+            var user = User.Create(userRegistration); //se crea nuevo user.Registration
+            _context.User.Add(user);  //se descarga
+            _context.SaveChanges(); //se guardan los cambios
+            _context.Dispose();
+            return UserRegistered.Create(user); //devuelve el usuario creado
         }
     }
 }

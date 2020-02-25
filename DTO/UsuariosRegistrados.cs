@@ -1,7 +1,7 @@
 using System;
-using Api.Dominio;
+using Pizzeria.Dominio;
 //se comprueba que todo está bien y se devuelve la información que quiero que se vea al dominio
-namespace Api.UsuarioRegistrado
+namespace Pizzeria.DTO
 {
     public class UserRegistered
     {

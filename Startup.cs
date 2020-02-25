@@ -13,7 +13,7 @@ using Microsoft.Extensions.Logging;
 using Pizzeria.Infraestructure;
 using Microsoft.EntityFrameworkCore;
 
-namespace Pizzeria_grupo
+namespace Pizzeria
 {
     public class Startup
     {

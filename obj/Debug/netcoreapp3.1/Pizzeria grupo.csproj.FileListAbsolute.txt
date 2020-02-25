@@ -68,3 +68,38 @@ c:\Curso\Pizzeria-grupo-master\Pizzeria-grupo\obj\Debug\netcoreapp3.1\Pizzeria g
 C:\Curso\Pizzeria-grupo-master\Pizzeria-grupo\obj\Debug\netcoreapp3.1\Pizzeria grupo.csproj.CopyComplete
 c:\Curso\Pizzeria-grupo-master\Pizzeria-grupo\obj\Debug\netcoreapp3.1\Pizzeria grupo.dll
 c:\Curso\Pizzeria-grupo-master\Pizzeria-grupo\obj\Debug\netcoreapp3.1\Pizzeria grupo.pdb
+c:\curso\clonado\Pizzeria-grupo-10\bin\Debug\netcoreapp3.1\appsettings.Development.json
+c:\curso\clonado\Pizzeria-grupo-10\bin\Debug\netcoreapp3.1\appsettings.json
+c:\curso\clonado\Pizzeria-grupo-10\bin\Debug\netcoreapp3.1\Properties\launchSettings.json
+c:\curso\clonado\Pizzeria-grupo-10\bin\Debug\netcoreapp3.1\Pizzeria grupo.exe
+C:\curso\clonado\Pizzeria-grupo-10\bin\Debug\netcoreapp3.1\Pizzeria grupo.deps.json
+C:\curso\clonado\Pizzeria-grupo-10\bin\Debug\netcoreapp3.1\Pizzeria grupo.runtimeconfig.json
+C:\curso\clonado\Pizzeria-grupo-10\bin\Debug\netcoreapp3.1\Pizzeria grupo.runtimeconfig.dev.json
+c:\curso\clonado\Pizzeria-grupo-10\bin\Debug\netcoreapp3.1\Pizzeria grupo.dll
+c:\curso\clonado\Pizzeria-grupo-10\bin\Debug\netcoreapp3.1\Pizzeria grupo.pdb
+c:\curso\clonado\Pizzeria-grupo-10\bin\Debug\netcoreapp3.1\Microsoft.Bcl.AsyncInterfaces.dll
+c:\curso\clonado\Pizzeria-grupo-10\bin\Debug\netcoreapp3.1\Microsoft.Bcl.HashCode.dll
+c:\curso\clonado\Pizzeria-grupo-10\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.dll
+c:\curso\clonado\Pizzeria-grupo-10\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Abstractions.dll
+c:\curso\clonado\Pizzeria-grupo-10\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.InMemory.dll
+c:\curso\clonado\Pizzeria-grupo-10\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Caching.Abstractions.dll
+c:\curso\clonado\Pizzeria-grupo-10\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Caching.Memory.dll
+c:\curso\clonado\Pizzeria-grupo-10\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.dll
+c:\curso\clonado\Pizzeria-grupo-10\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.Abstractions.dll
+c:\curso\clonado\Pizzeria-grupo-10\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.Binder.dll
+c:\curso\clonado\Pizzeria-grupo-10\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.dll
+c:\curso\clonado\Pizzeria-grupo-10\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+c:\curso\clonado\Pizzeria-grupo-10\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.dll
+c:\curso\clonado\Pizzeria-grupo-10\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.Abstractions.dll
+c:\curso\clonado\Pizzeria-grupo-10\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Options.dll
+c:\curso\clonado\Pizzeria-grupo-10\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Primitives.dll
+c:\curso\clonado\Pizzeria-grupo-10\obj\Debug\netcoreapp3.1\Pizzeria grupo.csprojAssemblyReference.cache
+c:\curso\clonado\Pizzeria-grupo-10\obj\Debug\netcoreapp3.1\staticwebassets\Pizzeria grupo.StaticWebAssets.Manifest.cache
+c:\curso\clonado\Pizzeria-grupo-10\obj\Debug\netcoreapp3.1\staticwebassets\Pizzeria grupo.StaticWebAssets.xml
+c:\curso\clonado\Pizzeria-grupo-10\obj\Debug\netcoreapp3.1\Pizzeria grupo.MvcApplicationPartsAssemblyInfo.cache
+c:\curso\clonado\Pizzeria-grupo-10\obj\Debug\netcoreapp3.1\Pizzeria grupo.AssemblyInfoInputs.cache
+c:\curso\clonado\Pizzeria-grupo-10\obj\Debug\netcoreapp3.1\Pizzeria grupo.AssemblyInfo.cs
+c:\curso\clonado\Pizzeria-grupo-10\obj\Debug\netcoreapp3.1\Pizzeria grupo.RazorTargetAssemblyInfo.cache
+C:\curso\clonado\Pizzeria-grupo-10\obj\Debug\netcoreapp3.1\Pizzeria grupo.csproj.CopyComplete
+c:\curso\clonado\Pizzeria-grupo-10\obj\Debug\netcoreapp3.1\Pizzeria grupo.dll
+c:\curso\clonado\Pizzeria-grupo-10\obj\Debug\netcoreapp3.1\Pizzeria grupo.pdb

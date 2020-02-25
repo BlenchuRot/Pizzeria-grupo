@@ -1,10 +1,9 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
-using Api.Application;
-using Api.UsuarioRegistrado;
-using Api.RegistroUsuario;
+using Pizzeria.Application;
+using Pizzeria.DTO;
 
-namespace API.Controllers
+namespace Pizzeria.Controllers
 {
     [ApiController]
     [Route("[controller]")]

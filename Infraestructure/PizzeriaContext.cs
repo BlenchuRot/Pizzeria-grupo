@@ -1,7 +1,5 @@
 using Microsoft.EntityFrameworkCore;
-using Api.Dominio;
-using API.Infraestructure;
-
+using Pizzeria.Dominio;
 
 namespace Pizzeria.Infraestructure
 {
