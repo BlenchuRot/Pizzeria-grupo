@@ -1,0 +1,27 @@
+using System;
+using Pizzeria.Dominio;
+//se comprueba que todo está bien y se devuelve la información que quiero que se vea al dominio
+namespace Pizzeria.DTO
+{
+    public class PizzaRegistered
+    {
+        public static PizzaRegistered Create(Pizza pizza)
+        {
+            //devuelvo la información del usuario sin el password, 
+            //para que no se vea esa informacion
+            var pizzaRegistered = new PizzaRegistered()
+            {
+                Id = pizza.Id,
+
+                Name = pizza.Name,
+
+            };
+            return pizzaRegistered;
+        }
+        //propiedades
+        public Guid Id { get; set; }
+
+        public string Name { get; set; }
+
+    }
+}
