@@ -8,12 +8,12 @@ namespace Pizzeria.DTO
         //se pide el Id, con el campo [required], 
         //no se valida hasta que está completo ese campo    
         [Required]
-        public long Id { get; set; }
+        public string Id { get; set; }
         /*se pide el Nombre con el campo [required], no valida
           hasta que está completo ese campo.
         */
         [Required]
-        public string Nombre { get; set; }
+        public string Name { get; set; }
        
         }
 }
