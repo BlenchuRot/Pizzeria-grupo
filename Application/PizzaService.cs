@@ -1,14 +1,17 @@
 using Pizzeria.DTO;
+using Pizzeria.Infraestructure;
+using Pizzeria.Dominio;
 namespace Pizzeria.Application
 {
     class PizzaService
     {
-        class PizzaService : IPizzaService
+        class pizzaService : IPizzaService
         {
             private readonly PizzeriaContext _context;
-            public PizzaService(PizzeriaContext context)
+            public pizzaService(PizzeriaContext context)
             {
                 _context = context;
+                
             }
 
             public PizzaRegistered Register(PizzaRegistration pizzaRegistration)
