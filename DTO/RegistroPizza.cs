@@ -14,6 +14,10 @@ namespace Pizzeria.DTO
 
         [Required]
         public string Name { get; set; }
+<<<<<<< HEAD
 
+=======
+       
+>>>>>>> ea3e4810b775d3bb24a1e73e97d47832b1514a56
     }
 }
