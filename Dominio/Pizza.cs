@@ -1,17 +1,28 @@
 using System;
-using System.Collections.Generic;
 using Pizzeria.DTO;
 
 
 //Aquí se crea el dominio de la Pizzeria
 namespace Pizzeria.Dominio
 {
-    //creo la clase Pizzeria para un nueva Pizzeria
+    //creo la clase Pizza
     public class Pizza
     {
-        //con el método Pizzeria Create, creamos la Pizzeria
-    
-        
+     
+      
+        //propiedades
+        public Guid Id { get; set; }
+        public string Name { get; set; }
 
+         public string Ingredients { get; set; }
+
+          public string Comments { get; set; } 
+
+          public double Price {
+              get { return this._calculatePrice();}
+          }
+
+          public double CalculatePrice(){ return 0.0;}
+          //TODO
     }
 }
