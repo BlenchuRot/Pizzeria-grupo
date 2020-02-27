@@ -13,7 +13,7 @@ namespace Pizzeria.DTO
           hasta que está completo ese campo. */
        
         [Required]
-        public string Nombre { get; set; }
+        public string Name { get; set; }
        
     }
 }
