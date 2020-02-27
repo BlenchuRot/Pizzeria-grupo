@@ -5,9 +5,9 @@ using Pizzeria.DTO;
 namespace Pizzeria.Dominio
 {
     //creo la clase Ingrediente para un nuevo Ingrediente
-    public class Comentario
+    public class Comment
     {
         //con el método Ingrediente Create, creamos el ingrediente
-      
+
     }
 }

@@ -11,9 +11,8 @@ namespace Pizzeria.Application
             public pizzaService(PizzeriaContext context)
             {
                 _context = context;
-                
-            }
 
+            }
             public PizzaRegistered Register(PizzaRegistration pizzaRegistration)
             {
                 var pizza = Pizza.Create(pizzaRegistration); //se crea nuevo Pizza.Registration

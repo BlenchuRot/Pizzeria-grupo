@@ -1,4 +1,6 @@
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using Pizzeria.Dominio;
 
 namespace Pizzeria.DTO
 {
@@ -14,5 +16,13 @@ namespace Pizzeria.DTO
 
         [Required]
         public string Name { get; set; }
+
+        [Required]
+        public ICollection<Ingredient> Ingredients { get; set; }
+
+        public double Price
+        {
+            get { return this._calculatePrice(); }
+        }
     }
 }
