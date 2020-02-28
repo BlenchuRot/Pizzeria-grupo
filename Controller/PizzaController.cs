@@ -9,8 +9,8 @@ namespace Pizzeria.Controllers
     [Route("[controller]")]
     public class PizzaController : ControllerBase
     {
-          private readonly ILogger<PizzaController> _logger;
-        private readonly IPizzaService _userService;
+        private readonly ILogger<PizzaController> _logger;
+        private readonly IPizzaService _pizzaService;
         public PizzaController(ILogger<PizzaController> logger, IPizzaService pizzaService)
         {
             _logger = logger;
@@ -28,8 +28,8 @@ namespace Pizzeria.Controllers
 
             PizzaRegistered pizzaRegistered = _pizzaService.Register(pizzaRegistration);
             //return Created;
-           return StatusCode(201, pizzaRegistered);
-        } 
+            return StatusCode(201, pizzaRegistered);
+        }
     }
 }
 

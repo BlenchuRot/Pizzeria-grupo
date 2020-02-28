@@ -4,15 +4,15 @@ using Pizzeria.Dominio;
 //Se crea el dominio de usuario
 namespace Pizzeria.Infraestructure
 {
-    //Creamos la clase BdContext
-    //Configuramos BbContext, recopila los tipos de entidad y asigna el esquema de base de datos.
+    //Creamos la clase DbContext
+    //Configuramos DbContext, recopila los tipos de entidad y asigna el esquema de base de datos.
     public class PizzeriaContext : DbContext
     {
         //DbSet no acepta valores NULL, por el cual nunca será null, pero le permite tener aceso a ellas.
         public DbSet<User> User { get; set; }
          public DbSet<Pizza> Pizza { get; set; }
                
-        //El constructor acepta un DBContextOptions.
+        //El constructor acepta un DbContextOptions.
         //BdContext tiene una instancia de DbContextOptions.
         public PizzeriaContext(DbContextOptions<PizzeriaContext> options) : base(options)
         {

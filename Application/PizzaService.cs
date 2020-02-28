@@ -5,24 +5,22 @@ using System;
 
 namespace Pizzeria.Application
 {
-    class PizzaService
-    {
-        class pizzaService : IPizzaService
+
+    class pizzaService 
         {
             private readonly PizzeriaContext _context;
             public pizzaService(PizzeriaContext context)
             {
                 _context = context;
-                
+            
             }
-
             public PizzaRegistered Register(PizzaRegistration pizzaRegistration)
             {
                 var pizza = Pizza.Create(pizzaRegistration); //se crea nuevo Pizza.Registration
-                _context.Pizza.Add(pizza);  //se descarga
+                _context.Pizza.Add(Name);  //se descarga
                 _context.SaveChanges(); //se guardan los cambios
                 _context.Dispose();
-                return PizzaRegistered.Create(pizza); //devuelve el usuario creado
+                return PizzaRegistered.Create(pizza); 
             }
               public Pizza BuscarPorId(Guid id){
               return _context.Pizza.Find(id);
@@ -31,9 +29,4 @@ namespace Pizzeria.Application
 
 
     }
-
-        internal Pizza GetById(Guid pizzaId)
-        {
-            throw new NotImplementedException();
-        }
-    }
+}

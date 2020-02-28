@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore;
 namespace Pizzeria.Infraestructure
 {
     //creamos una clase para configurar un usuario
-    public class IngredienteConfiguration
+    public class IngredientConfiguration
     {
         /*creamos un método publico estatico y que no devuelva nada,
           y creamos el tipo ModelBuilder con la propiedad modelBuilder, */
@@ -15,11 +15,11 @@ namespace Pizzeria.Infraestructure
               asociación de la pk a ese usuario*/
             modelBuilder
             /*creamos la entidad usuario para la base de datos*/
-              .Entity<Ingrediente>(ingrediente =>
+              .Entity<Ingredient>(ingredient =>
               {
-                  ingrediente.HasKey(ingrediente => ingrediente.Id);
+                  ingredient.HasKey(ingredient => ingredient.Id);
                   /*creamos el email de usuario como único*/
-                  ingrediente.HasAlternateKey(ingrediente => ingrediente.Name);
+                  ingredient.HasAlternateKey(ingredient => ingredient.Name);
               });
             /*creamos la asociación de el Id a ese usuario como pk*/
 

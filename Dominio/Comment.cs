@@ -10,30 +10,16 @@ namespace Pizzeria.Dominio
     { public Guid Id {get; set;}
       public DateTime CreationDate {get; set;}
       public int Puntuacion {get; set;}
-
-        internal static object Haskey(object p)
-        {
-            throw new NotImplementedException();
-        }
-
-        public string Text {get; set;}
-      public Pizza Pizza {get; set;}
+      public string Text {get; set;}
       public User User {get; set;}
       
-       public Comment(int puntuacion, string text, Pizza pizza, User user){
+       public Comment(int puntuacion, string text,  User user){
          Puntuacion = puntuacion;
          Text = text;
-         Pizza = pizza;
          User = user;
          this.Id = Guid.NewGuid();
          CreationDate = DateTime.Now;
        }
 
-        public Comment(int puntuacion, string text, Pizza pizza)
-        {
-            Puntuacion = puntuacion;
-            Text = text;
-            Pizza = pizza;
-        }
     }
 }

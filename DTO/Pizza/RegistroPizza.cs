@@ -1,8 +1,10 @@
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using Pizzeria.Dominio;
 
 namespace Pizzeria.DTO
 {
-    //se le pide al usuario su nombre,email y password, para el registro de usuario
+    
     public class PizzaRegistration
     {
         //se pide el Id, con el campo [required], 
@@ -14,5 +16,13 @@ namespace Pizzeria.DTO
 
         [Required]
         public string Name { get; set; }
+
+        [Required]
+        public ICollection<Ingredient> Ingredients { get; set; }
+
+        public double Price
+        {
+            get { return this._calculatePrice(); }
+        }
     }
 }
