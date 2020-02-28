@@ -7,7 +7,7 @@ namespace Pizzeria.Controllers
 {
     [ApiController]
     [Route("[controller]")]
-    public class IngredienteController : ControllerBase
+    public class IngredientController : ControllerBase
     {
        
     }
