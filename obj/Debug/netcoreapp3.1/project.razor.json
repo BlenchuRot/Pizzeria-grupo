@@ -1,13 +1,5 @@
 {
-<<<<<<< HEAD
-  "FilePath": "c:\\Curso\\Proyectos\\Pizzeria-grupo\\Pizzeria.csproj",
-=======
-<<<<<<< HEAD
-  "FilePath": "c:\\curso\\Pizzeria-grupo\\Pizzeria.csproj",
-=======
-  "FilePath": "c:\\curso\\pizza\\Pizzeria-grupo-4\\Pizzeria.csproj",
->>>>>>> 40db8995c27beacadb996accf27a159247ccdb4e
->>>>>>> 4f82d3931cbf2853ff33cd01e7df03448e3f591d
+  "FilePath": "c:\\curso\\pizza\\Pizzeria-grupo-5\\Pizzeria.csproj",
   "Configuration": {
     "ConfigurationName": "MVC-3.0",
     "LanguageVersion": "3.0",

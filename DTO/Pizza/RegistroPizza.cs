@@ -4,7 +4,7 @@ using Pizzeria.Dominio;
 
 namespace Pizzeria.DTO
 {
-    //se le pide al usuario su nombre,email y password, para el registro de usuario
+    
     public class PizzaRegistration
     {
         //se pide el Id, con el campo [required], 

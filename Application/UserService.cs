@@ -4,7 +4,7 @@ using Pizzeria.Dominio;
 
 namespace Pizzeria.Application
 {
-    class UserService : IUserService
+    class UserService : BaseService, IUserService 
     {
         private readonly PizzeriaContext _context;
         public UserService(PizzeriaContext context)

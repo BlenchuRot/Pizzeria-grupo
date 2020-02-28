@@ -23,5 +23,9 @@ namespace Pizzeria.DTO
 
         public string Name { get; set; }
 
+        internal static PizzaRegistered Create(Object id)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
