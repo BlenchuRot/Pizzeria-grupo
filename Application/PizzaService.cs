@@ -1,6 +1,8 @@
 using Pizzeria.DTO;
 using Pizzeria.Infraestructure;
 using Pizzeria.Dominio;
+using System;
+
 namespace Pizzeria.Application
 {
     class PizzaService
@@ -22,7 +24,16 @@ namespace Pizzeria.Application
                 _context.Dispose();
                 return PizzaRegistered.Create(pizza); //devuelve el usuario creado
             }
-        }
+              public Pizza BuscarPorId(Guid id){
+              return _context.Pizza.Find(id);
+        } 
+
+
 
     }
-}
+
+        internal Pizza GetById(Guid pizzaId)
+        {
+            throw new NotImplementedException();
+        }
+    }

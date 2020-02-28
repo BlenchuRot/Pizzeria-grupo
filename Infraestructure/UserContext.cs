@@ -11,6 +11,7 @@ namespace Pizzeria.Infraestructure
     {
         //DbSet no acepta valores NULL, por el cual nunca será null, pero le permite tener aceso a ellas.
         public DbSet<User> User { get; set; }
+        public DbSet <Comment> Comment {get; set;}
         //El constructor acepta un DBContextOptions.
         //BdContext tiene una instancia de DbContextOptions.
         public UserContext(DbContextOptions<UserContext> options) : base(options)
@@ -21,6 +22,8 @@ namespace Pizzeria.Infraestructure
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             UserConfiguration.Apply(modelBuilder);
+            
         }
+         
     }
 }

@@ -23,6 +23,11 @@ namespace Pizzeria.Dominio
           }
 
           public double CalculatePrice(){ return 0.0;}
-          //TODO
+
+        internal static object Create(PizzaRegistration pizzaRegistration)
+        {
+            throw new NotImplementedException();
+        }
+        //TODO
     }
 }

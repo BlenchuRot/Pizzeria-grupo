@@ -1,6 +1,7 @@
 using Pizzeria.DTO;
 using Pizzeria.Infraestructure;
 using Pizzeria.Dominio;
+using System;
 
 namespace Pizzeria.Application
 {
@@ -19,6 +20,10 @@ namespace Pizzeria.Application
             _context.SaveChanges(); //se guardan los cambios
             _context.Dispose();
             return UserRegistered.Create(user); //devuelve el usuario creado
+        }
+
+        public User GetById(Guid id){
+            return _context.User.Find(id);
         }
     }
 }
