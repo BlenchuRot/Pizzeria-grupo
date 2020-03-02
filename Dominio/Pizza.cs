@@ -23,16 +23,18 @@ namespace Pizzeria.Dominio
             get { return this._calculatePrice(); }
         }
 
-        internal static object Create(PizzaRegistration pizzaRegistration)
+        public static Pizza Create(PizzaRegistration pizzaRegistration)
         {
             throw new NotImplementedException();
         }
 
-        public double CalculatePrice() { 
-           
+        public double CalculatePrice()
+        {
 
-            
-            return 0.0; }
+
+
+            return 0.0;
+        }
         //TODO
     }
 }
