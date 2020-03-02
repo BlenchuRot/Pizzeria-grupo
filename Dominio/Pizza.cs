@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using Pizzeria.DTO;
+using System.Linq;
 
 
 //Aquí se crea el dominio de la Pizzeria
@@ -23,16 +24,18 @@ namespace Pizzeria.Dominio
             get { return this._calculatePrice(); }
         }
 
-        internal static object Create(PizzaRegistration pizzaRegistration)
+        public static Pizza Create(PizzaRegistration pizzaRegistration)
         {
             throw new NotImplementedException();
         }
 
-        public double CalculatePrice() { 
-           
+        private double _calculatePrice()
+        {
+            Ingredients.Select(pi => pi.Ingredient.Price).Sum();
 
-            
-            return 0.0; }
+
+            return 0.0;
+        }
         //TODO
     }
 }
