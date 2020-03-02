@@ -21,9 +21,5 @@ namespace Pizzeria.Dominio
          this.Id = Guid.NewGuid();
          CreationDate = DateTime.Now;
         }
-
-        public Comment()
-        {
-        }
     }
 }

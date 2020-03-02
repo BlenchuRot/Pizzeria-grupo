@@ -21,14 +21,11 @@ namespace Pizzeria.Application
 
         public void Create(CreateCommentDTO dto)
         {
-           var Comment = new Comment ()
-           {
-               Puntuacion = dto.puntuacion,
-               Text = dto.text,
-               User = _userService.FindById(dto.UserId),
-               Id = Guid.NewGuid(),
-               CreationDate = DateTime.Now
-           };
+           var comment = new Comment (dto.Puntuacion, dto.Text, _userService.FindById(dto.UserId));
+           _context.Comment.Add(comment);
+           _pizzaService.AddComment(comment, dto.PizzaId);
+           _context.SaveChanges();
+           _context.Dispose();
 
         }
     }
