@@ -5,12 +5,13 @@ using System;
 
 namespace Pizzeria.Application
 {
-    class UserService : BaseService, IUserService 
+    class UserService: BaseService, IUserService
     {
-        private readonly PizzeriaContext _context;
-        public UserService(PizzeriaContext context)
+        private readonly IUserContext _context;
+        public UserService(IUserContext context) : base(context)
         {
             _context = context;
+           
         }
 
         public UserRegistered Register(UserRegistration userRegistration)
@@ -24,6 +25,11 @@ namespace Pizzeria.Application
 
         public User GetById(Guid id){
             return _context.User.Find(id);
+        }
+
+        public UserRegistered FindId(Guid id)
+        {
+            throw new NotImplementedException();
         }
     }
 }

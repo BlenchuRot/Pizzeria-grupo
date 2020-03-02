@@ -22,7 +22,7 @@ namespace Pizzeria.Application
                 _context.Dispose();
                 return PizzaRegistered.Create(pizza); 
             }
-              public Pizza BuscarPorId(Guid id){
+              public Pizza GetById(Guid id){
               return _context.Pizza.Find(id);
         } 
 
