@@ -15,7 +15,9 @@ namespace Pizzeria.Dominio
                 //generamos un id unico con el Guid.NewGuid
                 Id = Guid.NewGuid(),
                 //se registra el nombre del ingrediente      
-                Name = ingredientRegistration.Name
+                Name = ingredientRegistration.Name,
+
+                Price = ingredientRegistration.Price
 
             };
             // retornamos los datos del ingrediente     
@@ -24,6 +26,8 @@ namespace Pizzeria.Dominio
         //propiedades
         public Guid Id { get; set; }
         public string Name { get; set; }
+
+        public double Price { get; set; }
 
     }
 }
