@@ -31,8 +31,7 @@ namespace Pizzeria.Dominio
 
         private double _calculatePrice()
         {
-            Ingredients.Select(pi => pi.Ingredient.Price)
-            .Aggregate(Ingredient);
+            Ingredients.Select(pi => pi.Ingredient.Price).Sum();
 
 
             return 0.0;
