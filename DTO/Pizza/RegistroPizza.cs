@@ -7,6 +7,8 @@ namespace Pizzeria.DTO
 
     public class PizzaRegistration
     {
+        private double _calculatePrice;
+
         //se pide el Id, con el campo [required], 
         //no se valida hasta que está completo ese campo    
         [Required]
@@ -23,7 +25,7 @@ namespace Pizzeria.DTO
         [Required]
         public double Price
         {
-            get { return this._calculatePrice(); }
+            get { return this._calculatePrice; }
         }
     }
 }
