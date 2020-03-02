@@ -1,5 +1,6 @@
 using System;
 using System.ComponentModel.DataAnnotations;
+using Pizzeria.Dominio;
 
 namespace Pizzeria.DTO
 {
@@ -10,6 +11,15 @@ namespace Pizzeria.DTO
        public DateTime CreationDate {get; set;}
        public string Text {get; set;}
        public int Puntuacion {get; set;}
+
+       public static LeerCommentDTO Create (Comment comment){
+           var Comment = comment;
+           return LeerCommentDTO.Create(comment);
+
+
+           
+       }
+
     }
 }
     

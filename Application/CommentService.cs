@@ -3,8 +3,6 @@ using Pizzeria.Dominio;
 using Pizzeria.DTO;
 using Pizzeria.Infraestructure;
 
-
-
 namespace Pizzeria.Application
 {
     public class CommentService : ICommentService
@@ -19,14 +17,15 @@ namespace Pizzeria.Application
             _userService = userService;
         }
 
-        public void Create(CreateCommentDTO dto)
+        public LeerCommentDTO Create (CreateCommentDTO dto)
         {
-           var comment = new Comment (dto.Puntuacion, dto.Text, _userService.FindById(dto.UserId));
+           var comment = new Comment (dto.Puntuacion, dto.Text, _userService.FindById(dto.UserId));//Creamos el nuevo comentario con la puntuacion, texto y usuario
            _context.Comment.Add(comment);
            _pizzaService.AddComment(comment, dto.PizzaId);
-           _context.SaveChanges();
+           _context.SaveChanges(); //guarda los cambios
            _context.Dispose();
-
-        }
-    }
+           // todo: 
+           return LeerCommentDTO.Create(comment);
+    }     
+  }
 }
