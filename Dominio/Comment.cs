@@ -1,9 +1,10 @@
 using System;
 
 
-//Aquí se crea el dominio del Comentario
+
 namespace Pizzeria.Dominio
 {
+
     //Se crea la clase Comentario
     public class Comment
     //Definimos sus atributos
@@ -20,6 +21,5 @@ namespace Pizzeria.Dominio
          this.Id = Guid.NewGuid();
          CreationDate = DateTime.Now;
        }
-
     }
 }
