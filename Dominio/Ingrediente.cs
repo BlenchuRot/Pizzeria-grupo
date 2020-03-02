@@ -7,13 +7,11 @@ namespace Pizzeria.Dominio
 {
    
     public class Ingredient
-    {
-        [Required]
+    { 
         public Guid Id { get; set; }
-        [Required]
-        public string Nombre { get; set; }
-        [Required]
-        public int Precio{get; set;}
-    
+        public string Name { get; set; }
+        public double price{get;set;}
+
+
     }
 }
