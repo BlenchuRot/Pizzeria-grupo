@@ -1,5 +1,4 @@
 using System;
-using Pizzeria.DTO;
 
 //Aquí se crea el dominio del Comentario
 namespace Pizzeria.Dominio
@@ -13,13 +12,18 @@ namespace Pizzeria.Dominio
       public string Text {get; set;}
       public User User {get; set;}
       
-       public Comment(int puntuacion, string text,  User user){
+
+        public Comment(int puntuacion, string text,  User user)
+        {
          Puntuacion = puntuacion;
          Text = text;
          User = user;
          this.Id = Guid.NewGuid();
          CreationDate = DateTime.Now;
-       }
+        }
 
+        public Comment()
+        {
+        }
     }
 }
