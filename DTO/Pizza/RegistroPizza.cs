@@ -4,7 +4,7 @@ using Pizzeria.Dominio;
 
 namespace Pizzeria.DTO
 {
-    
+
     public class PizzaRegistration
     {
         //se pide el Id, con el campo [required], 
@@ -20,6 +20,7 @@ namespace Pizzeria.DTO
         [Required]
         public ICollection<Ingredient> Ingredients { get; set; }
 
+        [Required]
         public double Price
         {
             get { return this._calculatePrice(); }

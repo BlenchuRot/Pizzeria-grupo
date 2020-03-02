@@ -15,6 +15,8 @@ namespace Pizzeria.DTO
 
                 Name = pizza.Name,
 
+                Price = pizza.Price,
+
             };
             return pizzaRegistered;
         }
@@ -23,7 +25,11 @@ namespace Pizzeria.DTO
 
         public string Name { get; set; }
 
+        private double Price { get; set; }
+
+
         internal static PizzaRegistered Create(Object id)
+
         {
             throw new NotImplementedException();
         }
