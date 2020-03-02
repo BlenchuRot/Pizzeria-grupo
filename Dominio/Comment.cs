@@ -12,18 +12,14 @@ namespace Pizzeria.Dominio
       public DateTime CreationDate {get; set;}
       public int Puntuacion {get; set;}
       public string Text {get; set;}
-      public Pizza Pizza {get; set;}
       public User User {get; set;}
       
-       public Comment(int puntuacion, string text, Pizza pizza, User user){
+       public Comment(int puntuacion, string text,  User user){
          Puntuacion = puntuacion;
          Text = text;
-         Pizza = pizza;
          User = user;
          this.Id = Guid.NewGuid();
          CreationDate = DateTime.Now;
        }
-    
     }
-    
 }

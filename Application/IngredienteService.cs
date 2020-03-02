@@ -11,12 +11,12 @@ namespace Pizzeria.Application
                 _context = context;
 
             }
-        public IngredientRegistered Register (IngredientRegistration ingredientRegistration){
-            var ingredient = IngredientRegistration.Create(ingredientRegistration);
-            _context.Ingredient.Add(ingredient);
-            _context.SaveChanges();
-            _context.Dispose();
-            return IngredientRegistered.Create(ingredient);
+        public void Create (CreateIngredientDTO createIngredientDTO){
+           var ingredient = new Ingredient(createIngredientDTO.Name, createIngredientDTO.
+           Price);
+           _context.Ingredient.Add(ingredient);
+           _context.SaveChanges();
+           _context.Dispose();
 
         }
 

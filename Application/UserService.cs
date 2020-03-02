@@ -1,15 +1,17 @@
 using Pizzeria.DTO;
 using Pizzeria.Infraestructure;
 using Pizzeria.Dominio;
+using System;
 
 namespace Pizzeria.Application
 {
-    class UserService : IUserService
+    class UserService: BaseService, IUserService
     {
-        private readonly PizzeriaContext _context;
-        public UserService(PizzeriaContext context)
+        private readonly IUserContext _context;
+        public UserService(IUserContext context) : base(context)
         {
             _context = context;
+           
         }
 
         public UserRegistered Register(UserRegistration userRegistration)
@@ -19,6 +21,15 @@ namespace Pizzeria.Application
             _context.SaveChanges(); //se guardan los cambios
             _context.Dispose();
             return UserRegistered.Create(user); //devuelve el usuario creado
+        }
+
+        public User GetById(Guid id){
+            return _context.User.Find(id);
+        }
+
+        public UserRegistered FindId(Guid id)
+        {
+            throw new NotImplementedException();
         }
     }
 }

@@ -1,10 +1,12 @@
 using Pizzeria.DTO;
-using Pizzeria.DTO;
 
 namespace Pizzeria.Application
 {
     public interface IIngredienteService
     {
-        IngredientRegistered Register(IngredientRegistration ingredientRegistration);
+        void Create (CreateIngredientDTO createIngredientDTO);
+        public Read(IngredientDetailsDTO ingredientDetailsDTO);
+        retun ();
     }
+
 }
