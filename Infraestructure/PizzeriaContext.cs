@@ -11,11 +11,8 @@ namespace Pizzeria.Infraestructure
         //DbSet no acepta valores NULL, por el cual nunca será null, pero le permite tener aceso a ellas.
         public DbSet<User> User { get; set; }
          public DbSet<Pizza> Pizza { get; set; }
-<<<<<<< HEAD
          public DbSet<Ingredient> Ingredient{get; set;}
-=======
          public DbSet<Comment> Comment {get; set;}
->>>>>>> bb3224fc7f5bcd10ef7c2a94a6a51b5a6720912a
                
         //El constructor acepta un DbContextOptions.
         //BdContext tiene una instancia de DbContextOptions.

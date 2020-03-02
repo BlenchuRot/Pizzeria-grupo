@@ -13,11 +13,13 @@ namespace Pizzeria.DTO
        public int Puntuacion {get; set;}
 
        public static LeerCommentDTO Create (Comment comment){
-           var Comment = comment;
-           return LeerCommentDTO.Create(comment);
-
-
-           
+           return new LeerCommentDTO() {
+               Id = comment.Id,
+               UserName = comment.User.Name,
+               CreationDate = comment.CreationDate,
+               Text = comment.Text,
+               Puntuacion = comment.Puntuacion
+           };
        }
 
     }
