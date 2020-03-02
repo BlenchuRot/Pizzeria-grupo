@@ -32,7 +32,7 @@ namespace Pizzeria.Dominio
         private double _calculatePrice()
         {
             Ingredients.Select(pi => pi.Ingredient.Price)
-            .Aggregate()
+            .Aggregate(Ingredient);
 
 
             return 0.0;
