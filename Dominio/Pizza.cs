@@ -1,6 +1,8 @@
 using System;
 using System.Collections.Generic;
 using Pizzeria.DTO;
+using System.Linq;
+
 
 
 //Aquí se crea el dominio de la Pizzeria
@@ -28,9 +30,10 @@ namespace Pizzeria.Dominio
             throw new NotImplementedException();
         }
 
-        public double CalculatePrice()
+        private double _calculatePrice()
         {
-
+            Ingredients.Select(pi => pi.Ingredient.Price)
+            .Aggregate()
 
 
             return 0.0;
