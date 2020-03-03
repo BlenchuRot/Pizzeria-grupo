@@ -6,7 +6,7 @@ namespace Pizzeria.DTO
 {
     public class CreateIngredientDTO
     {
-         [Required]
+        [Required]
         public Guid Id { get; set; }
         [Required]
         public string Name { get; set; }

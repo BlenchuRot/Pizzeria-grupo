@@ -5,8 +5,8 @@ namespace Pizzeria.Application
     public interface IIngredientService
     {
         void Create(CreateIngredientDTO createIngredientDTO);
-        void Read(IngredientDetailDTO ingredientDetailDTO);
-        IngredientRegistered Register(IngredientRegistration ingredientRegistration);
+        void Read(IngredientRegisterDTO ingredientDetailDTO);
+        IngredientRegisterDTO Register(IngredientRegisterDTO ingredientRegisterDTO);
 
     }
 

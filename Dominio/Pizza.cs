@@ -25,7 +25,7 @@ namespace Pizzeria.Dominio
             get { return this._calculatePrice(); }
         }
 
-        public static Pizza Create(PizzaRegistration pizzaRegistration)
+        public static Pizza Create(PizzaRegistered pizzaRegistered)
         {
             // TODO: implementar
             throw new NotImplementedException();
