@@ -1,6 +1,7 @@
 using Pizzeria.DTO;
 using Pizzeria.Infraestructure;
 using Pizzeria.Dominio;
+using System;
 namespace Pizzeria.Application
 {
    public class IngredientService : Ingredient
@@ -18,6 +19,11 @@ namespace Pizzeria.Application
            _context.SaveChanges();
            _context.Dispose();
 
+        }
+
+        public Ingredient GetById(Guid id){
+
+            return _context.Ingredient.Find(id);
         }
 
     }

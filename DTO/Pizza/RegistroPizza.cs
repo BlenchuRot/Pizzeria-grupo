@@ -25,7 +25,10 @@ namespace Pizzeria.DTO
         [Required]
         public double Price
         {
-            get { return this._calculatePrice; }
+            get { return this.CalculatePrice1; }
         }
+
+        public double CalculatePrice { get => CalculatePrice1; set => CalculatePrice1 = value; }
+        public double CalculatePrice1 { get => _calculatePrice; set => _calculatePrice = value; }
     }
 }
