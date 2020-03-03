@@ -8,5 +8,9 @@ namespace Pizzeria.DTO
         public Guid Id { get; set; }
         public string Name { get; set; }
 
+        // TODO: precio
+        // TODO: coleccion de ReadIngredientDTO
+        // TODO: coleccion de ReadCommentDTO
+
     }
 }

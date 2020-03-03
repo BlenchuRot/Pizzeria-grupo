@@ -8,7 +8,7 @@ namespace Pizzeria.Infraestructure
     public class CommentConfiguration
     {
 
-        public void Apply(ModelBuilder modelbuilder)
+        public static void Apply(ModelBuilder modelbuilder)
         {
             modelbuilder
             .Entity<Comment>(comment =>
