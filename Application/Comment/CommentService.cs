@@ -17,7 +17,7 @@ namespace Pizzeria.Application
             _userService = userService;
         }
 
-        public LeerCommentDTO Create(CreateCommentDTO dto)
+        public ReadCommentDTO Create(CreateCommentDTO dto)
         {
             var comment = new Comment(dto.Puntuacion, dto.Text, _userService.FindById(dto.UserId));//Creamos el nuevo comentario con la puntuacion, texto y usuario
             _context.Comment.Add(comment);
