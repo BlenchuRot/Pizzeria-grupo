@@ -6,10 +6,10 @@ using System;
 namespace Pizzeria.Application
 {
 
-    class pizzaService
+    class PizzaService : IPizzaService
     {
         private readonly PizzeriaContext _context;
-        public pizzaService(PizzeriaContext context)
+        public PizzaService(PizzeriaContext context)
         {
             _context = context;
 
