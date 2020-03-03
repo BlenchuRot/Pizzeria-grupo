@@ -1,4 +1,5 @@
 using System;
+using Pizzeria.DTO;
 
 //Aquí se crea el dominio del Ingrediente
 namespace Pizzeria.Dominio
@@ -19,6 +20,7 @@ namespace Pizzeria.Dominio
                 Price = ingredientRegistration.Price
 
             };
+          
             // retornamos los datos del ingrediente     
             return ingredient;
         }
