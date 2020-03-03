@@ -6,7 +6,7 @@ using System;
 namespace Pizzeria.Application
 {
 
-    class PizzaService : IPizzaService
+    class PizzaService
     {
         private readonly PizzeriaContext _context;
         public PizzaService(PizzeriaContext context)
