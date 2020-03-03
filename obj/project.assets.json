@@ -5381,11 +5381,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\curso\\pizza\\Pizzeria-grupo-3\\Pizzeria.csproj",
+      "projectUniqueName": "c:\\curso\\pizza\\Pizzeria-grupo-3\\Pizzeria.csproj",
       "projectName": "Pizzeria",
-      "projectPath": "C:\\curso\\pizza\\Pizzeria-grupo-3\\Pizzeria.csproj",
+      "projectPath": "c:\\curso\\pizza\\Pizzeria-grupo-3\\Pizzeria.csproj",
       "packagesPath": "C:\\Users\\FundaciónOnce\\.nuget\\packages\\",
-      "outputPath": "C:\\curso\\pizza\\Pizzeria-grupo-3\\obj\\",
+      "outputPath": "c:\\curso\\pizza\\Pizzeria-grupo-3\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\FundaciónOnce\\AppData\\Roaming\\NuGet\\NuGet.Config"
