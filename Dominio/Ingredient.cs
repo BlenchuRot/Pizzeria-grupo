@@ -4,12 +4,9 @@ using Pizzeria.DTO;
 //Aquí se crea el dominio del Ingrediente
 namespace Pizzeria.Dominio
 {
-   
+
     public class Ingredient
     {
-        private object id;
-
-        
 
         //con el método Ingrediente Create, creamos el ingrediente
         public static Ingredient Create(IngredienteRegistration ingredientRegistration)
