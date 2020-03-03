@@ -4,7 +4,7 @@ using Pizzeria.Infraestructure;
 
 namespace Pizzeria.Application
 {
-    public class CommentService : ICommentService
+    public class CommentService 
     {
         private readonly PizzeriaContext _context;
         private readonly IPizzaService _pizzaService;

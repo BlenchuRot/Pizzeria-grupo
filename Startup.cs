@@ -22,12 +22,13 @@ namespace Pizzeria
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddScoped(typeof(UserService), typeof(UserService));
             services.AddControllers();
             services.AddDbContext<PizzeriaContext>(options => options.UseInMemoryDatabase("Lucia"));
 
             //Relacionar El UserService con el IUserService.
             services.AddScoped(typeof(IUserService), typeof(UserService));
+            services.AddScoped(typeof(ICommentService), typeof(CommentService));
+
 
         }
 

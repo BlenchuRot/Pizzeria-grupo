@@ -1,22 +1,30 @@
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Logging;
-using Pizzeria.Application;
+using Pizzeria.DTO;
 
-namespace Pizzeria.Controllers
+namespace Pizzeria.Application
 {
     [ApiController]
     [Route("[controller]")]
     public class CommentController : ControllerBase
     {
-        //Se crea un registro
-      private readonly ILogger <CommentController> _logger;
       private readonly ICommentService _commentService;
-      public CommentController (ILogger<CommentController>logger){
-          _logger = logger;
+      public CommentController (ICommentService commentService){
           _commentService = commentService;
       }
-        
-      
+        [HttpPost]
+        public IActionResult Post([FromBody] CreateCommentDTO commentRegistration)
+    
+        {  
+            if (!ModelState.IsValid)
+            {
+               return BadRequest(ModelState);
+            }
+
+            CreateCommentDTO createCommentDTO = _commentService.Register(commentRegistration);
+            return StatusCode(201, commentRegistration);
+    
+        }
 
     }
-}
+    
+    }
