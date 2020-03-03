@@ -7,7 +7,10 @@ namespace Pizzeria.Dominio
    
     public class Ingredient
     {
-      
+        private object id;
+
+        
+
         //con el método Ingrediente Create, creamos el ingrediente
         public static Ingredient Create(IngredienteRegistration ingredientRegistration)
         {
@@ -28,7 +31,6 @@ namespace Pizzeria.Dominio
         public Guid Id { get; set; }
         public string Name { get; set; }
         public double Price { get; set; }
-
-       
+        public object User { get; set; }
     }
 }
