@@ -5,7 +5,7 @@ using Pizzeria.Dominio;
 namespace Pizzeria.DTO
 {
     //Se pide Id, Nombre de usuario, fecha, texto y puntuacion para el registro del comentario.
-    public class LeerCommentDTO
+    public class ReadCommentDTO
     {
         public Guid Id { get; set; }
 
@@ -15,9 +15,9 @@ namespace Pizzeria.DTO
         public string Text { get; set; }
         public int Puntuacion { get; set; }
 
-        public static LeerCommentDTO Create(Comment comment)
+        public static ReadCommentDTO Create(Comment comment)
         {
-            return new LeerCommentDTO()
+            return new ReadCommentDTO()
             {
                 Id = comment.Id,
                 UserName = comment.User.Name,
