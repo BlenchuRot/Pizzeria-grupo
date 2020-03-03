@@ -9,7 +9,7 @@ namespace Pizzeria.DTO
        public Guid Id {get; set;}
       public string Name { get; set; }
        public double Price {get; set;}
-       public object User { get; set; }
+       
 
        public static ReadIngredientDTO Create (Ingredient ingredient){
            return new ReadIngredientDTO() 
@@ -17,7 +17,7 @@ namespace Pizzeria.DTO
                Id = ingredient.Id,
                Name = ingredient.Name,
                Price = ingredient.Price,
-               User = ingredient.User
+              
             
         
            };
