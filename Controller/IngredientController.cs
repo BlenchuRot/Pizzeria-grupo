@@ -13,7 +13,7 @@ namespace Pizzeria.Controllers
     {
         private readonly ILogger<IngredientController> _logger;
         private readonly IIngredientService _ingredientService;
-        public IngredientController(ILogger<IngredientController> logger, IPizzaService pizzaService)
+        public IngredientController(ILogger<IngredientController> logger, IIngredientService ingredientService)
         {
             _logger = logger;
             _ingredientService = ingredientService;
