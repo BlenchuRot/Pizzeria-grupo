@@ -24,7 +24,6 @@ namespace Pizzeria.Dominio
                 Price = ingredientRegistration.Price
 
             };
-          
             // retornamos los datos del ingrediente     
             return ingredient;
         }
@@ -33,6 +32,15 @@ namespace Pizzeria.Dominio
         public string Name { get; set; }
         public double Price { get; set; }
 
+<<<<<<< HEAD
        
+=======
+        public Ingredient(string name, double price)
+       {
+             Id = Guid.NewGuid();
+             Name = name;
+             Price = price;
+       }
+>>>>>>> fbee031a960e9720068d1130b6d3584314447ee9
     }
 }
