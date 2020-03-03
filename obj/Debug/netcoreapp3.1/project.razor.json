@@ -1,5 +1,9 @@
 {
+<<<<<<< HEAD
   "FilePath": "c:\\APLICACION EXAMEN\\Pizzeria-grupo\\Pizzeria.csproj",
+=======
+  "FilePath": "c:\\curso\\pizza\\Pizzeria-grupo-3\\Pizzeria.csproj",
+>>>>>>> 5267987f4fb8bd874a1590ba647110815e089c35
   "Configuration": {
     "ConfigurationName": "MVC-3.0",
     "LanguageVersion": "3.0",

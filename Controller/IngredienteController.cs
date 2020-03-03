@@ -9,6 +9,6 @@ namespace Pizzeria.Controllers
     [Route("[controller]")]
     public class IngredientController : ControllerBase
     {
-        private readonly IIngredient
+        private string IIngredient { get; set;}
     }
 }
