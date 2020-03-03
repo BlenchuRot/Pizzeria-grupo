@@ -1,3 +1,4 @@
+using System;
 using System.ComponentModel.DataAnnotations;
 
 
@@ -9,7 +10,7 @@ namespace Pizzeria.DTO
         //se pide el Id, con el campo [required], 
         //no se valida hasta que está completo ese campo    
         [Required]
-        public long Id { get; set; }
+        public Guid Id { get; set; }
         /*se pide el nombre con el campo [required], no valida
           hasta que está completo ese campo. */
 

@@ -28,6 +28,6 @@ namespace Pizzeria.Dominio
         public Guid Id { get; set; }
         public string Name { get; set; }
         public double Price { get; set; }
-        public object User { get; set; }
+
     }
 }
