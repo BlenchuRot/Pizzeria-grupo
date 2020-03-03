@@ -1,4 +1,5 @@
 using System;
+using Pizzeria.DTO;
 
 //Aquí se crea el dominio del Ingrediente
 namespace Pizzeria.Dominio
@@ -6,6 +7,10 @@ namespace Pizzeria.Dominio
    
     public class Ingredient
     {
+       
+        
+        
+
         //con el método Ingrediente Create, creamos el ingrediente
         public static Ingredient Create(IngredienteRegistration ingredientRegistration)
         {
@@ -27,11 +32,15 @@ namespace Pizzeria.Dominio
         public string Name { get; set; }
         public double Price { get; set; }
 
+<<<<<<< HEAD
+       
+=======
         public Ingredient(string name, double price)
-        {
-            Id = Guid.NewGuid();
-            Name = name;
-            Price = price;
-        }
+       {
+             Id = Guid.NewGuid();
+             Name = name;
+             Price = price;
+       }
+>>>>>>> fbee031a960e9720068d1130b6d3584314447ee9
     }
 }
