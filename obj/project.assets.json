@@ -5381,11 +5381,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Curso\\Proyectos\\Pizzeria-grupo\\Pizzeria.csproj",
+      "projectUniqueName": "C:\\curso\\Pizzeria-grupo\\Pizzeria.csproj",
       "projectName": "Pizzeria",
-      "projectPath": "C:\\Curso\\Proyectos\\Pizzeria-grupo\\Pizzeria.csproj",
+      "projectPath": "C:\\curso\\Pizzeria-grupo\\Pizzeria.csproj",
       "packagesPath": "C:\\Users\\FundaciónOnce\\.nuget\\packages\\",
-      "outputPath": "C:\\Curso\\Proyectos\\Pizzeria-grupo\\obj\\",
+      "outputPath": "C:\\curso\\Pizzeria-grupo\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\FundaciónOnce\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -5445,7 +5445,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.100\\RuntimeIdentifierGraph.json"
       }
     }
   }

@@ -1,6 +1,4 @@
-using System;
 using Microsoft.AspNetCore.Mvc;
-using Pizzeria.Application;
 using Pizzeria.DTO;
 
 namespace Pizzeria.Application
