@@ -17,15 +17,20 @@ namespace Pizzeria.Application
             _userService = userService;
         }
 
-        public LeerCommentDTO Create(CreateCommentDTO dto)
+        public ReadCommentDTO Create(CreateCommentDTO dto)
         {
-            var comment = new Comment(dto.Puntuacion, dto.Text, _userService.FindById(dto.UserId));//Creamos el nuevo comentario con la puntuacion, texto y usuario
+            var comment = new Comment(dto.Shore, dto.Text, _userService.FindById(dto.UserId));//Creamos el nuevo comentario con la puntuacion, texto y usuario
             _context.Comment.Add(comment);
             _pizzaService.AddComment(comment, dto.PizzaId);
             _context.SaveChanges(); //guarda los cambios
             _context.Dispose();
             // todo: 
-            return LeerCommentDTO.Create(comment);
+            return ReadCommentDTO.Create(comment);
+        }
+
+        public CreateCommentDTO Register(CreateCommentDTO commentRegistration)
+        {
+            throw new System.NotImplementedException();
         }
     }
 }

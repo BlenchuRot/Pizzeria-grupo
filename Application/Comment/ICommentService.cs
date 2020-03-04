@@ -5,7 +5,7 @@ namespace Pizzeria.Application
 {
     public interface ICommentService
     {
-        LeerCommentDTO Create(CreateCommentDTO createCommentDTO);
+        ReadCommentDTO Create(CreateCommentDTO createCommentDTO);
         CreateCommentDTO Register(CreateCommentDTO commentRegistration);
 
     }

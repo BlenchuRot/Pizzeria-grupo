@@ -16,7 +16,7 @@ namespace Pizzeria.Infraestructure
                 comment.HasKey(comment => comment.Id);
 
                 comment
-                   .HasOne<User>(c => c.User)
+                   .HasOne<User>(c => c.ReadUserDTO)
                    .WithMany();
             });
         }
