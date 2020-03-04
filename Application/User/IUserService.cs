@@ -6,8 +6,8 @@ namespace Pizzeria.Application
 {
     public interface IUserService
     {
-        UserRegistered Register(UserRegistration userRegistration);
-        UserRegistered FindId(Guid id);
+        ReadUserDTO Register(CreateUserDTO userRegistration);
+        ReadUserDTO FindId(Guid id);
         User FindById(object userId);
     }
 }

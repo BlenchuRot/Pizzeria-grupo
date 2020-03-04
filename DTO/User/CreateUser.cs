@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations;
 namespace Pizzeria.DTO
 {
     //se le pide al usuario su nombre,email y password, para el registro de usuario
-    public class UserRegistration
+    public class CreateUserDTO
     {
         //se pide el nombre, con el campo [required], 
         //no se valida hasta que está completo ese campo    

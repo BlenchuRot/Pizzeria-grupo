@@ -3,13 +3,13 @@ using Pizzeria.Dominio;
 //se comprueba que todo está bien y se devuelve la información que quiero que se vea al dominio
 namespace Pizzeria.DTO
 {
-    public class UserRegistered
+    public class ReadUserDTO
     {
-        public static UserRegistered Create(User user)
+        public static ReadUserDTO Create(User user)
         {
             //devuelvo la información del usuario sin el password, 
             //para que no se vea esa informacion
-            var userRegistered = new UserRegistered()
+            var userRegistered = new ReadUserDTO()
             {
                 Id = user.Id,
                 Name = user.Name,

@@ -17,7 +17,7 @@ namespace Pizzeria.Controllers
             _userService = userService;
         }
         [HttpPost]
-        public IActionResult Post([FromBody] UserRegistration userRegistration)
+        public IActionResult Post([FromBody] CreateUserDTO userRegistration)
         {
             if (!ModelState.IsValid)
             {
@@ -26,9 +26,9 @@ namespace Pizzeria.Controllers
             //Generar un .log que nos devuelva "Hola".
             _logger.LogCritical("Hola");
 
-            UserRegistered userRegistered = _userService.Register(userRegistration);
+            ReadUserDTO userRegistered = _userService.Register(userRegistration);
             //return Created;
-           return StatusCode(201, userRegistered);
+            return StatusCode(201, userRegistered);
         }
     }
 }

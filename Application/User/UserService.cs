@@ -14,13 +14,13 @@ namespace Pizzeria.Application
 
         }
 
-        public UserRegistered Register(UserRegistration userRegistration)
+        public ReadUserDTO Register(CreateUserDTO userRegistration)
         {
             var user = User.Create(userRegistration); //se crea nuevo user.Registration
             _context.User.Add(user);  //se descarga
             _context.SaveChanges(); //se guardan los cambios
             _context.Dispose();
-            return UserRegistered.Create(user); //devuelve el usuario creado
+            return ReadUserDTO.Create(user); //devuelve el usuario creado
         }
 
         public User GetById(Guid id)
@@ -28,7 +28,7 @@ namespace Pizzeria.Application
             return _context.User.Find(id);
         }
 
-        public UserRegistered FindId(Guid id)
+        public ReadUserDTO FindId(Guid id)
         {
             throw new NotImplementedException();
         }

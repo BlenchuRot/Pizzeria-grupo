@@ -19,19 +19,17 @@ namespace Pizzeria.Dominio
         {
             get { return this._calculatePrice(); }
         }
-        public static Pizza Create(PizzaRegistered pizzaRegistered)
+        public static Pizza Create(CreatePizzaDTO createPizza)
         {
             var pizza = new Pizza()
             {
                 //generamos un id unico con el Guid.NewGuid
                 Id = Guid.NewGuid(),
                 //se registra el nombre de la pizza      
-                Name = pizzaRegistered.Name,
+                Name = createPizza.Name,
 
                 // TODO: Fallo PizzaIngredients
                 //se registran los ingredientes de la pizza 
-                PizzaIngredients = pizzaRegistered.PizzaIngredients,
-
             };
             // retornamos los datos de la pizza    
             return pizza;

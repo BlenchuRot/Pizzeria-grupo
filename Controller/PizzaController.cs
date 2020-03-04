@@ -17,7 +17,7 @@ namespace Pizzeria.Controllers
             _pizzaService = pizzaService;
         }
         [HttpPost]
-        public IActionResult Post([FromBody] PizzaRegistered pizzaRegistered)
+        public IActionResult Post([FromBody] CreatePizzaDTO pizzaRegistered)
         {
             if (!ModelState.IsValid)
             {
@@ -26,7 +26,7 @@ namespace Pizzeria.Controllers
             //Generar un .log que nos devuelva "Hola".
             _logger.LogCritical("Hola");
 
-            PizzaRegistered pizzaRegistered = _pizzaService.Create(pizzaRegistered);
+            CreatePizzaDTO pizzaRegistered = _pizzaService.Create(pizzaRegistered);
             //return Created;
             return StatusCode(201, pizzaRegistered);
         }

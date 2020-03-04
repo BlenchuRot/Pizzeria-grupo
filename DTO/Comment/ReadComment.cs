@@ -9,20 +9,20 @@ namespace Pizzeria.DTO
     {
         public Guid Id { get; set; }
 
-        public User ReadUserDTO { get; set; }
+        public ReadUserDTO User { get; set; }
         public DateTime CreationDate { get; set; }
         public string Text { get; set; }
-        public int Shore { get; set; }
+        public int Score { get; set; }
 
         public static ReadCommentDTO Create(Comment comment)
         {
             return new ReadCommentDTO()
             {
                 Id = comment.Id,
-                ReadUserDTO = comment.ReadUserDTO,
+                User = ReadUserDTO.Create(comment.User),
                 CreationDate = comment.CreationDate,
                 Text = comment.Text,
-                Shore = comment.Shore
+                Score = comment.Score
             };
         }
 

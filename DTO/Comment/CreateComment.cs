@@ -14,7 +14,7 @@ namespace Pizzeria.DTO
         [Required]
         public string Text { get; set; }
         [Required]
-        public int Shore { get; set; }
+        public int Score { get; set; }
 
     }
 }

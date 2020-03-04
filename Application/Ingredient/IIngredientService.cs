@@ -1,12 +1,11 @@
 ﻿using Pizzeria.DTO;
+using System.Collections.Generic;
+
 
 namespace Pizzeria.Application
 {
     public interface IIngredientService
     {
-        void Read(ReadIngredientDTO ingredientDTO);
-
-
+        ICollection<ReadIngredientDTO> ReadAll();
     }
-
 }

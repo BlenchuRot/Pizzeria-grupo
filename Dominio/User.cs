@@ -8,20 +8,20 @@ namespace Pizzeria.Dominio
     public class User
     {
         //con el método User Create, creamos el nuevo usuario
-        public static User Create(UserRegistration userRegistration)
+        public static User Create(CreateUserDTO createUser)
         {
             var user = new User()
             {
-         //generamos un id unico con el Guid.NewGuid
+                //generamos un id unico con el Guid.NewGuid
                 Id = Guid.NewGuid(),
-         //se registra el nombre de usuario       
-                Name = userRegistration.Name,
-         //se registra el email de usuario       
-                Email = userRegistration.Email,
-         //se registra el password del usuario       
-                Password = userRegistration.Password
+                //se registra el nombre de usuario       
+                Name = createUser.Name,
+                //se registra el email de usuario       
+                Email = createUser.Email,
+                //se registra el password del usuario       
+                Password = createUser.Password
             };
-         // retornamos los datos del usuario    
+            // retornamos los datos del usuario    
             return user;
         }
         //propiedades

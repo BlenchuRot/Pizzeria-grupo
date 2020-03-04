@@ -1,5 +1,6 @@
 using System;
 using Pizzeria.Dominio;
+using System.Collections.Generic;
 
 namespace Pizzeria.DTO
 {
@@ -9,8 +10,8 @@ namespace Pizzeria.DTO
         public Guid Id { get; set; }
         public string Name { get; set; }
         public double Price { get; set; }
-        public Ingredient ReadIngredientDTO { get; set; }
-        public Comment ReadCommentDTO { get; set; }
+        public ICollection<ReadIngredientDTO> Ingredients { get; set; }
+        public ICollection<ReadCommentDTO> Comments { get; set; }
 
     }
 }

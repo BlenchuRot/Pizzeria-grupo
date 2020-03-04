@@ -8,15 +8,15 @@ namespace Pizzeria.Dominio
     {
         public Guid Id { get; set; }
         public DateTime CreationDate { get; set; }
-        public int Shore { get; set; }
+        public int Score { get; set; }
         public string Text { get; set; }
-        public User ReadUserDTO { get; set; }
+        public User User { get; set; }
 
-        public Comment(int shore, string text, User readUserDTO)
+        public Comment(int score, string text, User user)
         {
-            Shore = shore;
+            Score = score;
             Text = text;
-            ReadUserDTO = readUserDTO;
+            User = user;
             this.Id = Guid.NewGuid();
             CreationDate = DateTime.Now;
         }
