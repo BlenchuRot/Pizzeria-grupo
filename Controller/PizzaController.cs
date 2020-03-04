@@ -1,6 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
-using Pizzeria.DTO;
 using Pizzeria.Application;
 
 namespace Pizzeria.Controllers
@@ -26,7 +25,7 @@ namespace Pizzeria.Controllers
             //Generar un .log que nos devuelva "Hola".
             _logger.LogCritical("Hola");
 
-            PizzaRegistered pizzaRegistered = _pizzaService.Register(pizzaRegistered);
+            PizzaRegistered pizzaRegistered = _pizzaService.Create(pizzaRegistered);
             //return Created;
             return StatusCode(201, pizzaRegistered);
         }

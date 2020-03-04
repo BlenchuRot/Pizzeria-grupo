@@ -7,8 +7,6 @@ namespace Pizzeria.DTO
     {
         public static PizzaRegistered Create(Pizza pizza)
         {
-            //devuelvo la información del usuario sin el password, 
-            //para que no se vea esa informacion
             var pizzaRegistered = new PizzaRegistered()
             {
                 Id = pizza.Id,
@@ -27,11 +25,5 @@ namespace Pizzeria.DTO
 
         private double Price { get; set; }
 
-
-        internal static PizzaRegistered Create(Object id)
-
-        {
-            throw new NotImplementedException();
-        }
     }
 }
