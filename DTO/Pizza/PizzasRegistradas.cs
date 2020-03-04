@@ -28,10 +28,6 @@ namespace Pizzeria.DTO
         private double Price { get; set; }
 
 
-        internal static PizzaRegistered Create(Object id)
-
-        {
-            throw new NotImplementedException();
-        }
+       
     }
 }
