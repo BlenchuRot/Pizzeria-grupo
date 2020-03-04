@@ -20,9 +20,7 @@ namespace Pizzeria.DTO
         }
         //propiedades
         public Guid Id { get; set; }
-
         public string Name { get; set; }
-
         private double Price { get; set; }
 
     }

@@ -8,12 +8,9 @@ namespace Pizzeria.DTO
     {
         public Guid Id { get; set; }
         public string Name { get; set; }
-        public ICollection<ReadPizzaIngredientDTO> PizzaIngredients { get; set; }
+        public ICollection<ReadIngredientDTO> Ingredients { get; set; }
         public ICollection<ReadCommentDTO> Comments { get; set; }
         public double Price { get; set; }
-
-
-        // TODO: ingredientes coleccion de Guid
 
     }
 }
