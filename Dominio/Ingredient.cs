@@ -1,5 +1,4 @@
 using System;
-using Pizzeria.DTO;
 
 //Aquí se crea el dominio del Ingrediente
 namespace Pizzeria.Dominio

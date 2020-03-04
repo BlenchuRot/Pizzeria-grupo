@@ -8,7 +8,7 @@ using System.Linq;
 namespace Pizzeria.Dominio
 {
     //creo la clase Pizza
-    public class Pizza
+    public class Pizza 
     {
         //propiedades
         public Guid Id { get; set; }
