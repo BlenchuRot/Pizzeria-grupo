@@ -3,10 +3,12 @@ using Pizzeria.DTO;
 
 namespace Pizzeria.Application
 {
-  public interface ICommentService{
-       LeerCommentDTO Create (CreateCommentDTO createCommentDTO);
+    public interface ICommentService
+    {
+        ReadCommentDTO Create(CreateCommentDTO createCommentDTO);
         CreateCommentDTO Register(CreateCommentDTO commentRegistration);
-    }
-}
 
-  
+    }
+} 
+
+

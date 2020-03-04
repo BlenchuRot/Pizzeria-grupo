@@ -5,13 +5,13 @@ using System;
 
 namespace Pizzeria.Application
 {
-    class UserService:  BaseService, IUserService
+    class UserService : IUserService
     {
-        private readonly IUserContext _context;
-        public UserService(IUserContext context) : base(context)
+        private readonly PizzeriaContext _context;
+        public UserService(PizzeriaContext context)
         {
             _context = context;
-           
+
         }
 
         public UserRegistered Register(UserRegistration userRegistration)
@@ -23,7 +23,8 @@ namespace Pizzeria.Application
             return UserRegistered.Create(user); //devuelve el usuario creado
         }
 
-        public User GetById(Guid id){
+        public User GetById(Guid id)
+        {
             return _context.User.Find(id);
         }
 

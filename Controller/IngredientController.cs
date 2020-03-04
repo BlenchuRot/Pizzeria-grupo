@@ -19,7 +19,7 @@ namespace Pizzeria.Controllers
             _ingredientService = ingredientService;
         }
         [HttpPost]
-        public IActionResult Post([FromBody] IngredientRegistration ingredientRegistration)
+        public IActionResult Post([FromBody] ingredientRegistered ingredientRegistered)
         {
             if (!ModelState.IsValid)
             {
@@ -28,9 +28,11 @@ namespace Pizzeria.Controllers
             //Generar un .log que nos devuelva "Hola".
             _logger.LogCritical("Hola");
 
-            IngredientRegistered ingredientRegistered = _ingredientService.Register(ingredientRegistration);
+            IngredientRegistered ingredientRegistered = _ingredientService.Register(ingredientRegistered);
             //return Created;
             return StatusCode(201, ingredientRegistered);
+
+            //TODO: mirar fallo
         }
     }
 }

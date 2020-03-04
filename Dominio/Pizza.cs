@@ -15,6 +15,7 @@ namespace Pizzeria.Dominio
         public Guid Id { get; set; }
         public string Name { get; set; }
 
+        // TODO: llamar PizzaIngredients
         public ICollection<PizzaIngredient> Ingredients { get; set; }
 
         public ICollection<Comment> Comments { get; set; }
@@ -24,18 +25,15 @@ namespace Pizzeria.Dominio
             get { return this._calculatePrice(); }
         }
 
-        public static Pizza Create(PizzaRegistration pizzaRegistration)
+        public static Pizza Create(PizzaRegistered pizzaRegistered)
         {
+            // TODO: implementar
             throw new NotImplementedException();
         }
 
         private double _calculatePrice()
         {
-            Ingredients.Select(pi => pi.Ingredient.Price).Sum();
-
-
-            return 0.0;
+            return Ingredients.Select(pi => pi.Ingredient.Price).Sum();
         }
-        //TODO
     }
 }

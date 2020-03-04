@@ -3,13 +3,11 @@ using Pizzeria.Dominio;
 //se comprueba que todo está bien y se devuelve la información que quiero que se vea al dominio
 namespace Pizzeria.DTO
 {
-    public class IngredientRegistered
+    public class IngredientRegisterDTO
     {
-        public static IngredientRegistered Create(Ingredient ingredient)
+        public static IngredientRegisterDTO Create(Ingredient ingredient)
         {
-            //devuelvo la información del usuario sin el password, 
-            //para que no se vea esa informacion
-            var ingredientRegistered = new IngredientRegistered()
+            var ingredientRegisterDTO = new IngredientRegisterDTO()
             {
                 Id = ingredient.Id,
 
@@ -18,20 +16,12 @@ namespace Pizzeria.DTO
                 Price = ingredient.Price,
 
             };
-            return ingredientRegistered;
+            return ingredientRegisterDTO;
         }
         //propiedades
         public Guid Id { get; set; }
-
         public string Name { get; set; }
-
         private double Price { get; set; }
 
-
-        internal static IngredientRegistered Create(Object id)
-
-        {
-            throw new NotImplementedException();
-        }
     }
 }

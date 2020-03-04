@@ -6,17 +6,17 @@ using System;
 namespace Pizzeria.Application
 {
 
-    class pizzaService
+    public class PizzaService : IPizzaService
     {
         private readonly PizzeriaContext _context;
-        public pizzaService(PizzeriaContext context)
+        public PizzaService(PizzeriaContext context)
         {
             _context = context;
 
         }
-        public PizzaRegistered Register(PizzaRegistration pizzaRegistration)
+        public PizzaRegistered Create(PizzaRegistered pizzaRegistered)
         {
-            var pizza = Pizza.Create(pizzaRegistration); //se crea nuevo Pizza.Registration
+            var pizza = Pizza.Create(pizzaRegistered); //se crea nuevo Pizza.Registration
             _context.Pizza.Add(pizza);  //se descarga
             _context.SaveChanges(); //se guardan los cambios
             _context.Dispose();
@@ -27,7 +27,9 @@ namespace Pizzeria.Application
             return _context.Pizza.Find(id);
         }
 
-
-
+        public void AddComment(Comment comment, Guid pizzaId)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
