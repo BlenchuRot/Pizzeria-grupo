@@ -17,7 +17,7 @@ namespace Pizzeria.Application
             _userService = userService;
 
         }
-        public ReadIngredientDTO Create(CreateIngredientDTO dto)
+        public ReadIngredientDTO Create(ReadIngredientDTO dto)
         {
             var ingredient = new Ingredient();
             _context.Ingredient.Add(ingredient);

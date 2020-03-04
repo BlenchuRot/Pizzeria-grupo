@@ -6,7 +6,7 @@ namespace Pizzeria.Controllers
 {
     [ApiController]
     [Route("[controller]")]
-    public class IngredientController: ControllerBase, ReadIngredientDTO
+    public class IngredientController: ControllerBase
     {
         private readonly ILogger<IngredientController> _logger;
         private readonly IIngredientService _ingredientService;
