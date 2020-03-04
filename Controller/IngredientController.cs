@@ -1,15 +1,12 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
-using Pizzeria.DTO;
 using Pizzeria.Application;
-
-
-
+using Pizzeria.DTO;
 namespace Pizzeria.Controllers
 {
     [ApiController]
     [Route("[controller]")]
-    public class IngredientController : ControllerBase
+    public class IngredientController: ControllerBase
     {
         private readonly ILogger<IngredientController> _logger;
         private readonly IIngredientService _ingredientService;
@@ -19,7 +16,7 @@ namespace Pizzeria.Controllers
             _ingredientService = ingredientService;
         }
         [HttpPost]
-        public IActionResult Post([FromBody] ingredientRegistered ingredientRegistered)
+        public IActionResult Post([FromBody] IIngredientService createIngredientDTO)
         {
             if (!ModelState.IsValid)
             {
@@ -28,9 +25,9 @@ namespace Pizzeria.Controllers
             //Generar un .log que nos devuelva "Hola".
             _logger.LogCritical("Hola");
 
-            IngredientRegistered ingredientRegistered = _ingredientService.Register(ingredientRegistered);
+            CreateIngredientDTO ingredientRegistration = _ingredientService.Create(createIngredientDTO);
             //return Created;
-            return StatusCode(201, ingredientRegistered);
+            return StatusCode(201, createIngredientDTO);
 
             //TODO: mirar fallo
         }

@@ -25,5 +25,10 @@ namespace Pizzeria.DTO
 
         private double Price { get; set; }
 
+<<<<<<< HEAD
+=======
+
+       
+>>>>>>> 16cb0258d3879f3f33e8a75b914bad0536a815b9
     }
 }
