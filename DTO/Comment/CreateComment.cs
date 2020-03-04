@@ -15,7 +15,7 @@ namespace Pizzeria.DTO
         [Required]
         public string Text { get; set; }
         [Required]
-        public int Puntuacion { get; set; }
+        public int Shore { get; set; }
 
     }
 }

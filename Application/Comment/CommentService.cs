@@ -19,7 +19,7 @@ namespace Pizzeria.Application
 
         public ReadCommentDTO Create(CreateCommentDTO dto)
         {
-            var comment = new Comment(dto.Puntuacion, dto.Text, _userService.FindById(dto.UserId));//Creamos el nuevo comentario con la puntuacion, texto y usuario
+            var comment = new Comment(dto.Shore, dto.Text, _userService.FindById(dto.UserId));//Creamos el nuevo comentario con la puntuacion, texto y usuario
             _context.Comment.Add(comment);
             _pizzaService.AddComment(comment, dto.PizzaId);
             _context.SaveChanges(); //guarda los cambios

@@ -9,21 +9,21 @@ namespace Pizzeria.DTO
     {
         public Guid Id { get; set; }
 
-        // TODO: cambiar por LeerUserDTO
-        public string UserName { get; set; }
+        // TODO: cambiar por ReadUserDTO
+        public User ReadUserDTO { get; set; }
         public DateTime CreationDate { get; set; }
         public string Text { get; set; }
-        public int Puntuacion { get; set; }
+        public int Shore { get; set; }
 
         public static ReadCommentDTO Create(Comment comment)
         {
             return new ReadCommentDTO()
             {
                 Id = comment.Id,
-                UserName = comment.User.Name,
+                ReadUserDTO = comment.ReadUserDTO,
                 CreationDate = comment.CreationDate,
                 Text = comment.Text,
-                Puntuacion = comment.Puntuacion
+                Shore = comment.Shore
             };
         }
 
