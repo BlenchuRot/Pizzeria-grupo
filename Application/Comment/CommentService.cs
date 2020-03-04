@@ -4,7 +4,7 @@ using Pizzeria.Infraestructure;
 
 namespace Pizzeria.Application
 {
-    public class CommentService 
+    public class CommentService : ICommentService
     {
         private readonly PizzeriaContext _context;
         private readonly IPizzaService _pizzaService;
@@ -26,11 +26,6 @@ namespace Pizzeria.Application
             _context.Dispose();
             // todo: 
             return ReadCommentDTO.Create(comment);
-        }
-
-        public CreateCommentDTO Register(CreateCommentDTO commentRegistration)
-        {
-            throw new System.NotImplementedException();
         }
     }
 }
