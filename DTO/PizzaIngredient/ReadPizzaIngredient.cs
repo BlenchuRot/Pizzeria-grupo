@@ -1,6 +1,5 @@
 using System;
-using System.Collections.Generic;
-
+using Pizzeria.Dominio;
 namespace Pizzeria.DTO
 {
     //Se pide Id, Nombre de usuario, fecha, texto y puntuacion para el registro del comentario.
@@ -19,3 +18,4 @@ namespace Pizzeria.DTO
 
 
     }
+}

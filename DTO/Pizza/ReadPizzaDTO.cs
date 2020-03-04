@@ -1,4 +1,5 @@
 using System;
+using Pizzeria.Dominio;
 
 namespace Pizzeria.DTO
 {
