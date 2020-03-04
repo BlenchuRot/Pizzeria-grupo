@@ -27,7 +27,7 @@ namespace Pizzeria.Controllers
             //Generar un .log que nos devuelva "Hola".
             _logger.LogCritical("Hola");
 
-            ReadIngredientDTO readIngredientDTO = _ingredientService.ReadAll();
+            ReadIngredientDTO() readIngredientDTO = _ingredientService.ReadAll();
             //return Created;
             return StatusCode(201, readIngredientDTO);
 
