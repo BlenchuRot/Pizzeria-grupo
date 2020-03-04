@@ -6,7 +6,6 @@ namespace Pizzeria.DTO
     //Se pide Usuario, IdPizza, texto y puntuacion para el registro del comentario.
     public class CreateCommentDTO
     {
-
         [Required]
         public Guid UserId { get; set; }
         [Required]

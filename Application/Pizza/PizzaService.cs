@@ -5,14 +5,12 @@ using System;
 
 namespace Pizzeria.Application
 {
-
     public class PizzaService : IPizzaService
     {
         private readonly PizzeriaContext _context;
         public PizzaService(PizzeriaContext context)
         {
             _context = context;
-
         }
         public CreatePizzaDTO Create(CreatePizzaDTO pizzaRegistered)
         {
@@ -26,7 +24,6 @@ namespace Pizzeria.Application
         {
             return _context.Pizza.Find(id);
         }
-
         public void AddComment(Comment comment, Guid pizzaId)
         {
             throw new NotImplementedException();
