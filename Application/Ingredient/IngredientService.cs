@@ -3,7 +3,6 @@ using Pizzeria.DTO;
 using Pizzeria.Infraestructure;
 using System.Collections.Generic;
 using System.Linq;
-using Pizzeria.Dominio;
 namespace Pizzeria.Application
 {
     public class IngredientService : IIngredientService
