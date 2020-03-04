@@ -5,9 +5,9 @@ namespace Pizzeria.Application
 {
     [ApiController]
     [Route("[controller]")]
-    public class CommentController
+    public class CommentController: ControllerBase
     {
-        private readonly ICommentService _commentService;
+        public readonly ICommentService _commentService;
         public CommentController(ICommentService commentService)
         {
             _commentService = commentService;
@@ -21,7 +21,7 @@ namespace Pizzeria.Application
                 return BadRequest(ModelState);
             }
 
-            CreateCommentDTO createCommentDTO = _commentService.Create(commentRegistration);
+            CreateCommentDTO createCommentDTO = _commentService.Register(commentRegistration);
             return StatusCode(201, commentRegistration);
 
         }
