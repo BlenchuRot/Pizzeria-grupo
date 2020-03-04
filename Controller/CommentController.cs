@@ -12,17 +12,18 @@ namespace Pizzeria.Application
         {
             _commentService = commentService;
         }
-        [HttpPost]
-        public IActionResult Post([FromBody] CreateCommentDTO commentRegistered)
 
-        {
+        [HttpPost]
+          public IActionResult Post([FromBody] ReadCommentDTO readComment)
+
+        {  
             if (!ModelState.IsValid)
             {
-                return BadRequest(ModelState);
+               return BadRequest(ModelState);
             }
 
-            CreateCommentDTO createCommentDTO = _commentService.Register(commentRegistration);
-            return StatusCode(201, commentRegistration);
+            ReadCommentDTO readCommentDTO = _commentService.Create(readComment);
+            return StatusCode(201, readComment);
 
         }
 
