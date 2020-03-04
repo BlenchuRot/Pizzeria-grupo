@@ -1,14 +1,26 @@
 using System;
-
 namespace Pizzeria.Dominio
 {
-    // TODO: configurar relaciones y pk
-    //creo la clase Pizzeria para un nueva Pizzeria
-    public class PizzaIngredient
+    public class PizzaIngredient: Pizza
     {
         public Ingredient Ingredient { get; set; }
         public Pizza Pizza { get; set; }
         public Guid PizzaId { get; set; }
         public Guid IngredientId { get; set; }
-    }
-}
+
+        public PizzaIngredient(Ingredient ingredient, Pizza pizza, Guid pizzaId, Guid ingredientId)
+        {
+            Ingredient = ingredient;
+
+            Pizza = pizza;
+
+            PizzaId = PizzaId;
+            
+            IngredientId = ingredientId;
+
+            
+        }
+    
+ }
+  }
+   
