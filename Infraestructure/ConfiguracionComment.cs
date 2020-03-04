@@ -1,6 +1,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Pizzeria.Dominio;
+using Pizzeria.DTO;
 
 namespace Pizzeria.Infraestructure
 {
@@ -16,9 +17,10 @@ namespace Pizzeria.Infraestructure
                 comment.HasKey(comment => comment.Id);
 
                 comment
-                   .HasOne<User>(c => c.ReadUserDTO)
+                   .HasOne<User>(c => c.User)
                    .WithMany();
             });
-        }
+        
     }
+}
 }

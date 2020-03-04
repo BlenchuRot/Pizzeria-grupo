@@ -1,6 +1,8 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using Pizzeria.Application;
+using System;
+using Pizzeria.Dominio;
 
 namespace Pizzeria.Controllers
 {
@@ -25,11 +27,11 @@ namespace Pizzeria.Controllers
             //Generar un .log que nos devuelva "Hola".
             _logger.LogCritical("Hola");
 
-            ReadIngredientDTO readIngredientDTO = _ingredientService.Read(readIngredientDTO);
+            ReadIngredientDTO readIngredientDTO = _ingredientService.ReadAll();
             //return Created;
             return StatusCode(201, readIngredientDTO);
 
-            //TODO: mirar fallo
+           
         }
     }
 }

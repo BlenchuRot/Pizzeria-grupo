@@ -22,8 +22,8 @@ namespace Pizzeria.Application
                return BadRequest(ModelState);
             }
 
-            ReadCommentDTO readCommentDTO = _commentService.Create(readComment);
-            return StatusCode(201, readComment);
+            ReadCommentDTO readCommentDTO = _commentService.ReadAll();
+            return StatusCode(201, readCommentDTO);
 
         }
 
