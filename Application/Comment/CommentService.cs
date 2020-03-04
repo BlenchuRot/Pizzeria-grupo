@@ -4,7 +4,7 @@ using Pizzeria.Infraestructure;
 
 namespace Pizzeria.Application
 {
-    public class CommentService : ICommentService
+    public class CommentService 
     {
         private readonly PizzeriaContext _context;
         private readonly IPizzaService _pizzaService;
@@ -25,7 +25,12 @@ namespace Pizzeria.Application
             _context.SaveChanges(); //guarda los cambios
             _context.Dispose();
             // todo: 
-            return LeerCommentDTO.Create(comment);
+            return ReadCommentDTO.Create(comment);
+        }
+
+        public CreateCommentDTO Register(CreateCommentDTO commentRegistration)
+        {
+            throw new System.NotImplementedException();
         }
     }
 }

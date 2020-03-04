@@ -4,7 +4,7 @@ using Pizzeria.Infraestructure;
 using Pizzeria.Dominio;
 namespace Pizzeria.Application
 {
-    public class IngredientService : IIngredientService
+    public class IngredientService 
     {
         private readonly PizzeriaContext _context;
         private readonly IPizzaService _pizzaService;
