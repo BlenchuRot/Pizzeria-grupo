@@ -12,19 +12,14 @@ namespace Pizzeria.DTO
             var userRegistered = new UserRegistered()
             {
                 Id = user.Id,
-
                 Name = user.Name,
-
                 Email = user.Email
-
             };
             return userRegistered;
         }
         //propiedades
         public Guid Id { get; set; }
-
         public string Name { get; set; }
-
         public string Email { get; set; }
     }
 }

@@ -7,7 +7,6 @@ namespace Pizzeria.DTO
     public class CreateCommentDTO
     {
 
-
         [Required]
         public Guid UserId { get; set; }
         [Required]
