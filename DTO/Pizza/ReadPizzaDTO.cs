@@ -7,10 +7,13 @@ namespace Pizzeria.DTO
     {
         public Guid Id { get; set; }
         public string Name { get; set; }
+        public double Price { get; set; }
 
-        // TODO: precio
         // TODO: coleccion de ReadIngredientDTO
+        public Ingredient ReadIngredientDTO { get; set; }
         // TODO: coleccion de ReadCommentDTO
+        public Comment ReadCommentDTO { get; set; }
+
 
     }
 }

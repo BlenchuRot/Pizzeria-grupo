@@ -1,10 +1,7 @@
 using System;
 
-
-
 namespace Pizzeria.Dominio
 {
-
     //Se crea la clase Comentario
     public class Comment
     //Definimos sus atributos
