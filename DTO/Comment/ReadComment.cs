@@ -9,7 +9,7 @@ namespace Pizzeria.DTO
     {
         public Guid Id { get; set; }
 
-        // TODO: cambiar por ReadUserDTO
+        // TODO: cambiar por ReadUserDTO ok
         public User ReadUserDTO { get; set; }
         public DateTime CreationDate { get; set; }
         public string Text { get; set; }

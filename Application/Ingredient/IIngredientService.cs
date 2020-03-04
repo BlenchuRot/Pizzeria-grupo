@@ -6,8 +6,8 @@ namespace Pizzeria.Application
     {
         void Create(CreateIngredientDTO createIngredientDTO);
         void Read(IngredientRegisterDTO ingredientDetailDTO);
-        IngredientRegisterDTO Register(IngredientRegisterDTO ingredientRegisterDTO);
-        CreateIngredientDTO Create(IIngredientService createIngredientDTO);
+
+
     }
 
 }
