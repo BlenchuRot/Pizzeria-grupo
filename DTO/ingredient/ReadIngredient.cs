@@ -11,7 +11,6 @@ namespace Pizzeria.DTO
         public string Name { get; set; }
         public double Price { get; set; }
 
-
         public static ReadIngredientDTO Create(Ingredient ingredient)
         {
             return new ReadIngredientDTO()
