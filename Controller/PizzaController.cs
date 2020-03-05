@@ -2,6 +2,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using Pizzeria.Application;
 using Pizzeria.DTO;
+using System;
 
 namespace Pizzeria.Controllers
 {
@@ -29,6 +30,17 @@ namespace Pizzeria.Controllers
             CreatePizzaDTO createPizzaDTO = _pizzaService.Create(pizzaRegistered);
             //return Created;
             return StatusCode(201, pizzaRegistered);
+        }
+        [HttpGet("{id}")]
+        public IActionResult Get(Guid id)
+        {
+            return StatusCode(200, _pizzaService.GetById(id));
+        }
+
+        [HttpGet]
+        public IActionResult Get()
+        {
+            return Ok(_pizzaService.FindAll());
         }
     }
 }

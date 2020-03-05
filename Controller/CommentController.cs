@@ -14,12 +14,12 @@ namespace Pizzeria.Application
         }
 
         [HttpPost]
-          public IActionResult Post([FromBody] CreateCommentDTO createComment)
+        public IActionResult Post([FromBody] CreateCommentDTO createComment)
 
-        {  
+        {
             if (!ModelState.IsValid)
             {
-               return BadRequest(ModelState);
+                return BadRequest(ModelState);
             }
 
             ReadCommentDTO readCommentDTO = _commentService.Create(createComment);

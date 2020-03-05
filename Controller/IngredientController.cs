@@ -13,11 +13,10 @@ namespace Pizzeria.Controllers
         {
             _ingredientService = ingredientService;
         }
-        [HttpGet] 
+        [HttpGet]
         public IActionResult Get()
-        {   
-            return StatusCode(200, _ingredientService.ReadAll());  
+        {
+            return StatusCode(200, _ingredientService.ReadAll());
         }
     }
 }
-
