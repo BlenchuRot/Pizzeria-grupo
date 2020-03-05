@@ -34,6 +34,11 @@ namespace Pizzeria.Controllers
         [HttpGet("{id}")]
         public IActionResult Get(Guid id)
         {
+            var pizza = _pizzaService.GetById(id);
+            if (pizza == null)
+            {
+                return NotFound();
+            }
             return StatusCode(200, _pizzaService.GetById(id));
         }
 
