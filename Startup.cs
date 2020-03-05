@@ -23,13 +23,10 @@ namespace Pizzeria
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
-            services.AddDbContext<PizzeriaContext>(options => options.UseSqlServer("Server=(local);Database=Pizzeria;Integrated Security=True;"));
-            
+            services.AddDbContext<PizzeriaContext>(options => options.UseSqlServer(Configuration.GetConnectionString("Pizzeria")));
+            ContainerSetup.ConfigureServices(services);
 
-            //Relacionar El UserService con el IUserService.
-            services.AddScoped(typeof(IUserService), typeof(UserService));
-            services.AddScoped(typeof(ICommentService), typeof(CommentService));
-            
+ 
        
 
         }
