@@ -21,6 +21,10 @@ namespace Pizzeria.Dominio
 
             
            
-        }  
+        }
+
+        public PizzaIngredient()
+        {
+        }
     }
 }
