@@ -1,11 +1,28 @@
+using Pizzeria.Dominio;
+using Microsoft.EntityFrameworkCore;
+
 namespace Pizzeria.Infraestructure
 {
-    //creamos una clase para configurar un usuario
-    public class PizzaIngredienteConfiguration
+    public class PizzaIngredientConfiguration
     {
-        /*creamos un método publico estatico y que no devuelva nada,
-          y creamos el tipo ModelBuilder con la propiedad modelBuilder, */
+        public static void Apply(ModelBuilder modelBuilder)
+        {
+            modelBuilder
+                .Entity<PizzaIngredient>(pi =>
+                {
+                    pi.HasKey(pi => new { pi.PizzaId, pi.IngredientId });
 
-        // TODO
+                    pi
+                        .HasOne<Pizza>(pi => pi.Pizza)
+                        .WithMany(p => p.PizzaIngredients)
+                        .HasForeignKey(pi => pi.PizzaId);
+
+                    pi
+                        .HasOne<Ingredient>(pi => pi.Ingredient)
+                        .WithMany()
+                        .HasForeignKey(pi => pi.IngredientId);
+
+                });
+        }
     }
 }
