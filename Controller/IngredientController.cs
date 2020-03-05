@@ -12,6 +12,9 @@ namespace Pizzeria.Controllers
     {
         private readonly ILogger<IngredientController> _logger;
         private readonly IIngredientService _ingredientService;
+
+
+
         public IngredientController(ILogger<IngredientController> logger, IIngredientService ingredientService)
         {
             _logger = logger;
@@ -27,7 +30,7 @@ namespace Pizzeria.Controllers
             //Generar un .log que nos devuelva "Hola".
             _logger.LogCritical("Hola");
 
-            ReadIngredientDTO() readIngredientDTO = _ingredientService.ReadAll();
+            ReadIngredientDTO readIngredientDTO = _ingredientService.ReadAll();
             //return Created;
             return StatusCode(201, readIngredientDTO);
 

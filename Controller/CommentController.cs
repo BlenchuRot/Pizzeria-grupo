@@ -14,7 +14,7 @@ namespace Pizzeria.Application
         }
 
         [HttpPost]
-          public IActionResult Post([FromBody] ReadCommentDTO readComment)
+          public IActionResult Post([FromBody] CreateCommentDTO readComment)
 
         {  
             if (!ModelState.IsValid)
@@ -22,7 +22,7 @@ namespace Pizzeria.Application
                return BadRequest(ModelState);
             }
 
-            ReadCommentDTO readCommentDTO = _commentService.ReadAll();
+            CreateCommentDTO readCommentDTO = _commentService.Create();
             return StatusCode(201, readCommentDTO);
 
         }
