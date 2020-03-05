@@ -24,9 +24,13 @@ namespace Pizzeria.Application
         {
             return _context.Pizza.Find(id);
         }
+        public Pizza FindAll()
+        {
+            return _context.Pizza.Find();
+        }
         public void AddComment(Comment comment, Guid pizzaId)
         {
-            
+
         }
     }
 }
