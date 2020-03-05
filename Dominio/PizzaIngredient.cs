@@ -1,7 +1,7 @@
 using System;
 namespace Pizzeria.Dominio
 {
-    public class PizzaIngredient : Pizza
+    public class PizzaIngredient 
     {
         public Ingredient Ingredient { get; set; }
         public Guid IngredientId { get; set; }
