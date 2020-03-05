@@ -1,9 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Logging;
 using Pizzeria.Application;
-using System;
-using Pizzeria.Dominio;
-using Pizzeria.DTO;
+
 
 namespace Pizzeria.Controllers
 {

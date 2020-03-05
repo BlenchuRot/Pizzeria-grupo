@@ -23,12 +23,14 @@ namespace Pizzeria
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
-            services.AddDbContext<PizzeriaContext>(options => options.UseInMemoryDatabase("Lucia"));
+            //services.AddDbContext<PizzeriaContext>(options => options.UseSqlServer());
+            
 
             //Relacionar El UserService con el IUserService.
             services.AddScoped(typeof(IUserService), typeof(UserService));
             services.AddScoped(typeof(ICommentService), typeof(CommentService));
-
+            
+       
 
         }
 
@@ -51,5 +53,7 @@ namespace Pizzeria
                 endpoints.MapControllers();
             });
         }
-    }
-}
+    }           
+
+    
+}         
