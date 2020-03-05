@@ -20,7 +20,7 @@ namespace Pizzeria.Controllers
             _logger = logger;
             _ingredientService = ingredientService;
         }
-        [HttpPost]
+        [HttpGet]
         public IActionResult Post([FromBody] IIngredientService ReadIngredientDTO)
         {
             if (!ModelState.IsValid)

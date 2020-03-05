@@ -26,7 +26,7 @@ namespace Pizzeria.Application
         }
         public void AddComment(Comment comment, Guid pizzaId)
         {
-            throw new NotImplementedException();
+            
         }
     }
 }
