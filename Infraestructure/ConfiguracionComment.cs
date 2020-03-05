@@ -1,7 +1,5 @@
-using System;
 using Microsoft.EntityFrameworkCore;
 using Pizzeria.Dominio;
-using Pizzeria.DTO;
 
 namespace Pizzeria.Infraestructure
 {
