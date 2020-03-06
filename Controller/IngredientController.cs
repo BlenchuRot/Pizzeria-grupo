@@ -16,7 +16,7 @@ namespace Pizzeria.Controllers
         [HttpGet]
         public IActionResult Get()
         {
-            return StatusCode(200, _ingredientService.ReadAll());
+            return StatusCode(200, _ingredientService.FindAll());
         }
     }
 }

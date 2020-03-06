@@ -13,8 +13,9 @@ namespace Pizzeria.Dominio
         //propiedades
         public Guid Id { get; set; }
         public string Name { get; set; }
-        public ICollection<PizzaIngredient> PizzaIngredients { get; set; } 
-        public ICollection<Comment> Comments { get; set;} 
+       
+        public ICollection<PizzaIngredient> PizzaIngredients { get; set; } = new List<PizzaIngredient>();
+        public ICollection<Comment> Comments { get; set; } = new List<Comment>();
         public double Price
         {
             get { return this._calculatePrice(); }
