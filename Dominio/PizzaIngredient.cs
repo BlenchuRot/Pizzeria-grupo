@@ -10,21 +10,10 @@ namespace Pizzeria.Dominio
         public Guid PizzaId { get; set; }
         
 
-        public PizzaIngredient(Ingredient ingredient, Pizza pizza, Guid pizzaId, Guid ingredientId)
-        {
-            Ingredient = ingredient;
+       
 
-            IngredientId = ingredientId;
+        
 
-            Pizza = pizza;
-
-            PizzaId = PizzaId;
-
-           
-        }
-
-        public PizzaIngredient()
-        {
-        }
+      
     }
 }
