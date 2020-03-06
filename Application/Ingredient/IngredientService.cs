@@ -1,6 +1,8 @@
 
+using Pizzeria.Dominio;
 using Pizzeria.DTO;
 using Pizzeria.Infraestructure;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 namespace Pizzeria.Application
@@ -17,9 +19,16 @@ namespace Pizzeria.Application
             _pizzaService = pizzaService;
             _userService = userService;
         }
-        public ICollection<ReadIngredientDTO> ReadAll()
+        public ICollection<ReadIngredientDTO> FindAll()
         {
             return _context.Ingredient.Select(ReadIngredientDTO.Create).ToList();
         }
-    }
+        public Ingredient FindById(Guid id) {
+            var ingredient = _context.Ingredient.Find(id);
+            return ingredient;
+        }
+
+
+    }  
+
 }

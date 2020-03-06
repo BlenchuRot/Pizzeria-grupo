@@ -21,14 +21,13 @@ namespace Pizzeria.Application
         {
             foreach (Guid ingredientId in ingredients)
             {
-                
-                 var ingredient = _ingredientService.ReadAll();
+                 var ingredient = _ingredientService.FindById(ingredientId);
                  var pizzaIngredient = new PizzaIngredient()
                 {
-                     Pizza = pizza,
-                     PizzaId = pizza.Id,
-                     Ingredient = ingredient,
-                     IngredientId = ingredientId  
+                    Pizza = pizza,
+                    PizzaId = pizza.Id,
+                    Ingredient = ingredient,
+                    IngredientId = ingredientId
                 };
                 pizza.PizzaIngredients.Add(pizzaIngredient);
             }

@@ -13,6 +13,7 @@ namespace Pizzeria.Dominio
         //propiedades
         public Guid Id { get; set; }
         public string Name { get; set; }
+       
         public ICollection<PizzaIngredient> PizzaIngredients { get; set; } = new List<PizzaIngredient>();
         public ICollection<Comment> Comments { get; set; } = new List<Comment>();
       public void AddComment(Comment comment)
@@ -31,6 +32,7 @@ namespace Pizzeria.Dominio
                 Id = Guid.NewGuid(),
                 //se registra el nombre de la pizza      
                 Name = createPizza.Name,
+              
 
                 // TODO: Fallo PizzaIngredients
                 //se registran los ingredientes de la pizza 
