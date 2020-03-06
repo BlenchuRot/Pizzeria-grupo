@@ -34,8 +34,6 @@ namespace Pizzeria.Dominio
                 Name = createPizza.Name,
               
 
-                // TODO: Fallo PizzaIngredients
-                //se registran los ingredientes de la pizza 
             };
             // retornamos los datos de la pizza    
             return pizza;
