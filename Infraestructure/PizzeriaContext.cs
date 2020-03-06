@@ -28,6 +28,10 @@ namespace Pizzeria.Infraestructure
         {
             PizzaConfiguration.Apply(modelBuilder);
             IngredientConfiguration.Apply(modelBuilder);
+            PizzaIngredientConfiguration.Apply(modelBuilder);
+            UserConfiguration.Apply(modelBuilder);
+            CommentConfiguration.Apply(modelBuilder);
+
             // TODO: aplicar configuraciones restantes
         }
     }
