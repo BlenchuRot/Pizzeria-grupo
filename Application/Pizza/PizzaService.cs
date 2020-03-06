@@ -12,13 +12,12 @@ namespace Pizzeria.Application
         {
             _context = context;
         }
-        public CreatePizzaDTO Create(CreatePizzaDTO pizzaRegistered)
+        public void Create(CreatePizzaDTO pizzaRegistered)
         {
             var pizza = Pizza.Create(pizzaRegistered); //se crea nuevo Pizza.Registration
             _context.Pizza.Add(pizza);  //se descarga
             _context.SaveChanges(); //se guardan los cambios
             _context.Dispose();
-            return CreatePizzaDTO.Create(pizza);
         }
         public Pizza GetById(Guid id)
         {
