@@ -13,8 +13,7 @@ namespace Pizzeria.Infraestructure
         public DbSet<Pizza> Pizza { get; set; }
         public DbSet<Ingredient> Ingredient { get; set; }
         public DbSet<Comment> Comment { get; set; }
-
-        //TODO: pizzaIngredient
+        public DbSet<PizzaIngredient> PizzaIngredient {get; set;}
 
         //El constructor acepta un DbContextOptions.
         //BdContext tiene una instancia de DbContextOptions.
@@ -32,7 +31,7 @@ namespace Pizzeria.Infraestructure
             UserConfiguration.Apply(modelBuilder);
             CommentConfiguration.Apply(modelBuilder);
 
-            // TODO: aplicar configuraciones restantes
+            
         }
     }
 }
