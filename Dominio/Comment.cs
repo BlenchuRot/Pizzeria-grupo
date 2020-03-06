@@ -12,6 +12,7 @@ namespace Pizzeria.Dominio
         public string Text { get; set; }
         public User User { get; set; }
 
+        public Comment(){}
         public Comment(int score, string text, User user)
         {
             Score = score;
