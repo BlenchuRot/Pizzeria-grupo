@@ -9,11 +9,6 @@ namespace Pizzeria.Dominio
         public Pizza Pizza { get; set; }
         public Guid PizzaId { get; set; }
         
-
-       
-
-        
-
       
     }
 }

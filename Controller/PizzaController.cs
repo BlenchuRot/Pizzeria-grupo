@@ -27,9 +27,9 @@ namespace Pizzeria.Controllers
             //Generar un .log que nos devuelva "Hola".
             _logger.LogCritical("Hola");
 
-            CreatePizzaDTO createPizzaDTO = _pizzaService.Create(pizzaRegistered);
+            _pizzaService.Create(pizzaRegistered);
             //return Created;
-            return StatusCode(201, pizzaRegistered);
+            return StatusCode(201);
         }
         [HttpGet("{id}")]
         public IActionResult Get(Guid id)

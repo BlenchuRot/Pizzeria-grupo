@@ -6,7 +6,7 @@ namespace Pizzeria.Application
 {
     public interface IPizzaService
     {
-        CreatePizzaDTO Create(CreatePizzaDTO pizzaRegistered);
+        void Create(CreatePizzaDTO pizzaRegistered);
 
         void AddComment(Comment comment, Guid pizzaId);
 
