@@ -20,9 +20,6 @@ namespace Pizzeria.Infraestructure
                   pizza.HasKey(pizza => pizza.Id);
                   /*creamos el nombre de la pizza como único*/
                   pizza.HasAlternateKey(pizza => pizza.Name);
-
-
-
                   
               });
             /*creamos la asociación de el Id a esa pizza como pk*/
