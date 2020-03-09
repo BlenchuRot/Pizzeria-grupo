@@ -22,7 +22,7 @@ namespace Pizzeria.Application
             _context.SaveChanges(); //se guardan los cambios
             _context.Dispose();
         }
-        
+       
         public Pizza GetById(Guid id)
         {
             return _context.Pizza.Find(id);

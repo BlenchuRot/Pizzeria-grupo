@@ -8,6 +8,7 @@ namespace Pizzeria
         public static void Main(string[] args)
         {
             CreateHostBuilder(args).Build().Run();
+         
         }
 
         public static IHostBuilder CreateHostBuilder(string[] args) =>
@@ -16,5 +17,6 @@ namespace Pizzeria
                 {
                     webBuilder.UseStartup<Startup>();
                 });
+                  
     }
 }
