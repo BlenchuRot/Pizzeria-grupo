@@ -17,7 +17,7 @@ namespace Pizzeria.Application
         public void Create(CreatePizzaDTO pizzaRegistered)
         {
             var pizza = Pizza.Create(pizzaRegistered); //se crea nuevo Pizza.Registration
-            _pizzaIngredientService.AddIngredients(pizza, ingredient);
+            _pizzaIngredientService.AddIngredients(pizza, pizzaRegistered.Ingredients);
             _context.Pizza.Add(pizza);  //se descarga
             _context.SaveChanges(); //se guardan los cambios
             _context.Dispose();
