@@ -33,6 +33,8 @@ namespace Pizzeria.Application
         }
         public void AddComment(Comment comment, Guid pizzaId)
         {
+          var pizza = _context.Pizza.Find();
+          pizza.AddComment(comment); 
 
         }
     }
