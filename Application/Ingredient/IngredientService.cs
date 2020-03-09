@@ -10,14 +10,14 @@ namespace Pizzeria.Application
     public class IngredientService : IIngredientService
     {
         private readonly PizzeriaContext _context;
-        private readonly IPizzaService _pizzaService;
-        private readonly IUserService _userService;
 
-        public IngredientService(PizzeriaContext context, IPizzaService pizzaService, IUserService userService)
+       
+
+        public IngredientService(PizzeriaContext context)
         {
             _context = context;
-            _pizzaService = pizzaService;
-            _userService = userService;
+           
+           
         }
         public ICollection<ReadIngredientDTO> FindAll()
         {
