@@ -1,6 +1,4 @@
 using Microsoft.Extensions.DependencyInjection;
-using Pizzeria.Infraestructure;
-using Microsoft.EntityFrameworkCore;
 using Pizzeria.Application;
 
 namespace Pizzeria

@@ -6,14 +6,14 @@ namespace Pizzeria.Application
 {
     public interface IPizzaService
     {
-        void Create(CreatePizzaDTO pizzaRegistered);
+       void Create(CreatePizzaDTO pizzaRegistered);
 
-        void AddComment(Comment comment, Guid pizzaId);
+       void AddComment(Comment comment, Guid pizzaId);
 
         Pizza GetById(Guid id);
 
         Pizza FindAll();
-
+       
     }
 }
 
