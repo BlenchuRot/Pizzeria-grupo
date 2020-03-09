@@ -11,13 +11,9 @@ namespace Pizzeria.Application
     {
         private readonly PizzeriaContext _context;
 
-       
-
         public IngredientService(PizzeriaContext context)
         {
-            _context = context;
-           
-           
+            _context = context;   
         }
         public ICollection<ReadIngredientDTO> FindAll()
         {
