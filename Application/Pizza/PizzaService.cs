@@ -12,14 +12,14 @@ namespace Pizzeria.Application
     {
         private readonly PizzeriaContext _context;
         private readonly IPizzaIngredientService _pizzaIngredientService;
-        private readonly IEnumerable<Pizza> pizza;
 
         public PizzaService(PizzeriaContext context, IPizzaIngredientService pizzaIngredientService)
         {
             _context = context;
             _pizzaIngredientService = pizzaIngredientService;
         }
-       
+
+
         public ReadPizzaDTO Create(CreatePizzaDTO pizzaRegistered)
         {
             var pizza = Pizza.Create(pizzaRegistered); //se crea nuevo Pizza.Registration
@@ -29,7 +29,7 @@ namespace Pizzeria.Application
             _context.Dispose();
              return ReadPizzaDTO.Create(pizza);
         }
-
+        
         public void AddComment(Comment comment, Guid pizzaId)
         {
           var pizza = _context.Pizza.Find();
@@ -56,7 +56,10 @@ namespace Pizzeria.Application
             };
                return dto;
         }
-
-    
+          public ICollection<ListPizzaDTO> FindAll()
+        {
+            return _context.Pizza.Select(ListPizzaDTO.Create).ToList();
+        }
+        
     }
-}
+ }      

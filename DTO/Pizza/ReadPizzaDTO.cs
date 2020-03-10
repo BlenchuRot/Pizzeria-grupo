@@ -13,6 +13,7 @@ namespace Pizzeria.DTO
         public ICollection<ReadIngredientDTO> Ingredients { get; set; }
         public ICollection<ReadCommentDTO> Comments { get; set; }
 
+
         public static ReadPizzaDTO Create(Pizza pizza){
             
             return new ReadPizzaDTO()

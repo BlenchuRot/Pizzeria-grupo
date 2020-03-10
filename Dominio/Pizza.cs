@@ -16,6 +16,7 @@ namespace Pizzeria.Dominio
        
         public ICollection<PizzaIngredient> PizzaIngredients { get; set; } = new List<PizzaIngredient>();
         public ICollection<Comment> Comments { get; set; } = new List<Comment>();
+        public ICollection<ListPizzaDTO> pizza {get; set;} = new List<ListPizzaDTO>();
       public void AddComment(Comment comment)
         {
             Comments.Add(comment);
