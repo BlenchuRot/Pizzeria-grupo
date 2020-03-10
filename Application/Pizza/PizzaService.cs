@@ -12,12 +12,19 @@ namespace Pizzeria.Application
     {
         private readonly PizzeriaContext _context;
         private readonly IPizzaIngredientService _pizzaIngredientService;
+
+       
+
         public PizzaService(PizzeriaContext context, IPizzaIngredientService pizzaIngredientService)
         {
             _context = context;
             _pizzaIngredientService = pizzaIngredientService;
         }
-       
+
+        public PizzaService()
+        {
+        }
+
         public void Create(CreatePizzaDTO pizzaRegistered)
         {
             var pizza = Pizza.Create(pizzaRegistered); //se crea nuevo Pizza.Registration
@@ -31,17 +38,14 @@ namespace Pizzeria.Application
         {
             return _context.Pizza.Find(id);
         }
-         public Pizza FindAll()
-        {
-            return _context.Pizza.Find();
-        }
+       
         public void AddComment(Comment comment, Guid pizzaId)
         {
           var pizza = _context.Pizza.Find();
           pizza.AddComment(comment); 
 
         }
-         public void FindById(Guid id)
+         public ReadPizzaDTO FindById(Guid id)
         {
             var pizza = _context.Pizza
                 .AsNoTracking()
@@ -50,7 +54,19 @@ namespace Pizzeria.Application
                 .Include(p => p.PizzaIngredients)
                 .ThenInclude(pi => pi.Ingredient)
                 .SingleOrDefault(p => p.Id == id);
-           // return pizza;
+
+            var dto = new ReadPizzaDTO(){
+                Id = pizza.Id,
+                Name = pizza.Name,
+                Price = pizza.Price,
+                Comments = pizza.Comments.Select(ReadCommentDTO.Create).ToList(),
+                Ingredients = pizza.PizzaIngredients.Select(pi => ReadIngredientDTO.Create(pi.Ingredient)).ToList()
+        
+            };
+            return dto;
         }
+
+       
+      
     }
 }

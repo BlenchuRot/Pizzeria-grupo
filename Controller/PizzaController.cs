@@ -46,7 +46,7 @@ namespace Pizzeria.Controllers
         [HttpGet]
         public IActionResult Get()
         {
-            return Ok(_pizzaService.FindAll);
+            return Ok(_pizzaService.FindAll());
         }
     }
 }
