@@ -12,40 +12,33 @@ namespace Pizzeria.Application
     {
         private readonly PizzeriaContext _context;
         private readonly IPizzaIngredientService _pizzaIngredientService;
-
-       
-
         public PizzaService(PizzeriaContext context, IPizzaIngredientService pizzaIngredientService)
         {
             _context = context;
             _pizzaIngredientService = pizzaIngredientService;
         }
-
-        public PizzaService()
-        {
-        }
-
-        public void Create(CreatePizzaDTO pizzaRegistered)
+       
+        public ReadPizzaDTO Create(CreatePizzaDTO pizzaRegistered)
         {
             var pizza = Pizza.Create(pizzaRegistered); //se crea nuevo Pizza.Registration
             _pizzaIngredientService.AddIngredients(pizza, pizzaRegistered.Ingredients); 
             _context.Pizza.Add(pizza);  //se descarga
             _context.SaveChanges(); //se guardan los cambios
             _context.Dispose();
+            return ReadPizzaDTO.Create(pizza);
         }
-       
-        public Pizza GetById(Guid id)
-        {
-            return _context.Pizza.Find(id);
-        }
-       
+        public ICollection<ListPizzaDTO> FindAll()
+          {
+              return  _context.Pizza.Select(Pizza.Create.ListPizzaDTO).ToList();
+          }
+        
         public void AddComment(Comment comment, Guid pizzaId)
         {
           var pizza = _context.Pizza.Find();
           pizza.AddComment(comment); 
 
         }
-         public ReadPizzaDTO FindById(Guid id)
+        public ReadPizzaDTO FindById(Guid id)
         {
             var pizza = _context.Pizza
                 .AsNoTracking()
@@ -64,9 +57,5 @@ namespace Pizzeria.Application
         
             };
             return dto;
-        }
-
-       
-      
     }
 }
