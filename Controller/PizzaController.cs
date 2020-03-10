@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using Pizzeria.Application;
+using Pizzeria.Dominio;
 using Pizzeria.DTO;
 using System;
 
@@ -45,7 +46,7 @@ namespace Pizzeria.Controllers
         [HttpGet]
         public IActionResult Get()
         {
-            return Ok(_pizzaService.FindAll());
+            return Ok(_pizzaService.FindAll);
         }
     }
 }

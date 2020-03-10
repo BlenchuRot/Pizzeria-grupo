@@ -10,10 +10,7 @@ namespace Pizzeria.Application
 
        void AddComment(Comment comment, Guid pizzaId);
 
-        Pizza GetById(Guid id);
-
-        Pizza FindAll();
-       
+        ReadPizzaDTO GetById(Guid id);
     }
 }
 
