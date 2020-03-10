@@ -12,6 +12,8 @@ namespace Pizzeria.Application
     {
         private readonly PizzeriaContext _context;
         private readonly IPizzaIngredientService _pizzaIngredientService;
+        private readonly IEnumerable<Pizza> pizza;
+
         public PizzaService(PizzeriaContext context, IPizzaIngredientService pizzaIngredientService)
         {
             _context = context;
@@ -25,13 +27,9 @@ namespace Pizzeria.Application
             _context.Pizza.Add(pizza);  //se descarga
             _context.SaveChanges(); //se guardan los cambios
             _context.Dispose();
-            return ReadPizzaDTO.Create(pizza);
+             return ReadPizzaDTO.Create(pizza);
         }
-        public ICollection<ListPizzaDTO> FindAll()
-          {
-              return  _context.Pizza.Select(Pizza.Create.ListPizzaDTO).ToList();
-          }
-        
+
         public void AddComment(Comment comment, Guid pizzaId)
         {
           var pizza = _context.Pizza.Find();
@@ -56,6 +54,9 @@ namespace Pizzeria.Application
                 Ingredients = pizza.PizzaIngredients.Select(pi => ReadIngredientDTO.Create(pi.Ingredient)).ToList()
         
             };
-            return dto;
+               return dto;
+        }
+
+    
     }
 }

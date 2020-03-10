@@ -10,8 +10,8 @@ namespace Pizzeria.Application
         ReadPizzaDTO Create(CreatePizzaDTO pizzaRegistered);
         void AddComment(Comment comment, Guid pizzaId);
         ICollection<ListPizzaDTO> FindAll ();
-        ReadPizzaDTO GetById(Guid id);
         ReadPizzaDTO FindById(Guid id);
+        ReadPizzaDTO GetById(Guid id);
         
     }
 }
