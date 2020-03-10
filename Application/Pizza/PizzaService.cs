@@ -12,41 +12,32 @@ namespace Pizzeria.Application
     {
         private readonly PizzeriaContext _context;
         private readonly IPizzaIngredientService _pizzaIngredientService;
-        
-       
+
+        public ICollection<ListPizzaDTO> FindAll => throw new NotImplementedException();
 
         public PizzaService(PizzeriaContext context, IPizzaIngredientService pizzaIngredientService)
         {
             _context = context;
             _pizzaIngredientService = pizzaIngredientService;
         }
-
-        public PizzaService()
-        {
-        }
-
-        public void Create(CreatePizzaDTO pizzaRegistered)
+       
+        public ReadPizzaDTO Create(CreatePizzaDTO pizzaRegistered)
         {
             var pizza = Pizza.Create(pizzaRegistered); //se crea nuevo Pizza.Registration
             _pizzaIngredientService.AddIngredients(pizza, pizzaRegistered.Ingredients); 
             _context.Pizza.Add(pizza);  //se descarga
             _context.SaveChanges(); //se guardan los cambios
             _context.Dispose();
+             return ReadPizzaDTO.Create(pizza);
         }
-       
-        public Pizza GetById(Guid id)
-        {
-            return _context.Pizza.Find(id);
-        }
-       
+
         public void AddComment(Comment comment, Guid pizzaId)
         {
           var pizza = _context.Pizza.Find();
           pizza.AddComment(comment); 
- 
+         
         }
-        
-         public ReadPizzaDTO FindById(Guid id)
+        public ReadPizzaDTO FindById(Guid id)
         {
             var pizza = _context.Pizza
                 .AsNoTracking()
@@ -64,14 +55,18 @@ namespace Pizzeria.Application
                 Ingredients = pizza.PizzaIngredients.Select(pi => ReadIngredientDTO.Create(pi.Ingredient)).ToList()
         
             };
-            return dto;
+               return dto;
         }
         ReadPizzaDTO IPizzaService.GetById(Guid id)
         {
-          var ide = new ReadPizzaDTO();
+          var dto = new ReadPizzaDTO(){
+             Id = id,
+            
+          };
            
-          return ide;
+          return dto;
         }
-         
+
+       
     }
 }

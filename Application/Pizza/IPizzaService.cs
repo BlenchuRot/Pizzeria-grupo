@@ -7,15 +7,13 @@ namespace Pizzeria.Application
 {
     public interface IPizzaService
     {
-      
+        ReadPizzaDTO Create(CreatePizzaDTO pizzaRegistered);
+        void AddComment(Comment comment, Guid pizzaId);
+        ICollection<ListPizzaDTO> FindAll { get; }
 
-        void Create(CreatePizzaDTO pizzaRegistered);
-
-       void AddComment(Comment comment, Guid pizzaId);
-
-        ReadPizzaDTO GetById(Guid id);
         ReadPizzaDTO FindById(Guid id);
-     
+        ReadPizzaDTO GetById(Guid id);
+        
     }
 }
 
