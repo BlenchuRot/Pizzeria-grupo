@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using Pizzeria.Dominio;
 using Pizzeria.DTO;
 
@@ -14,7 +15,7 @@ namespace Pizzeria.Application
 
         ReadPizzaDTO GetById(Guid id);
         ReadPizzaDTO FindById(Guid id);
-        object FindAll();
+     
     }
 }
 

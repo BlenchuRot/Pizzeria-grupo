@@ -12,7 +12,7 @@ namespace Pizzeria.Application
     {
         private readonly PizzeriaContext _context;
         private readonly IPizzaIngredientService _pizzaIngredientService;
-
+        
        
 
         public PizzaService(PizzeriaContext context, IPizzaIngredientService pizzaIngredientService)
@@ -43,8 +43,9 @@ namespace Pizzeria.Application
         {
           var pizza = _context.Pizza.Find();
           pizza.AddComment(comment); 
-
+ 
         }
+        
          public ReadPizzaDTO FindById(Guid id)
         {
             var pizza = _context.Pizza
@@ -65,8 +66,12 @@ namespace Pizzeria.Application
             };
             return dto;
         }
-
-       
-      
+        ReadPizzaDTO IPizzaService.GetById(Guid id)
+        {
+          var ide = new ReadPizzaDTO();
+           
+          return ide;
+        }
+         
     }
 }
