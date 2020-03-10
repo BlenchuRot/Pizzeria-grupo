@@ -19,7 +19,6 @@ namespace Pizzeria.Application
             _pizzaIngredientService = pizzaIngredientService;
         }
 
-
         public ReadPizzaDTO Create(CreatePizzaDTO pizzaRegistered)
         {
             var pizza = Pizza.Create(pizzaRegistered); //se crea nuevo Pizza.Registration
@@ -34,7 +33,7 @@ namespace Pizzeria.Application
         {
           var pizza = _context.Pizza.Find();
           pizza.AddComment(comment); 
-
+         
         }
         public ReadPizzaDTO FindById(Guid id)
         {
