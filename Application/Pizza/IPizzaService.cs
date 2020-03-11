@@ -11,7 +11,6 @@ namespace Pizzeria.Application
         void AddComment(Comment comment, Guid pizzaId);
         ICollection<ListPizzaDTO> FindAll();
         ReadPizzaDTO FindById(Guid id);
-        ReadPizzaDTO GetById(Guid id);
        
     }
 }

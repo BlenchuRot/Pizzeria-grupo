@@ -8,7 +8,7 @@ namespace Pizzeria.DTO
     {
 
         [Required]
-        public ReadUserDTO User  { get; set; }
+        public Guid UserId  { get; set; }
         [Required]
         public Guid PizzaId { get; set; }
         [Required]

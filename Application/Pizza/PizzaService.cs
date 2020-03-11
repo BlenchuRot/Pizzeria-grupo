@@ -59,7 +59,5 @@ namespace Pizzeria.Application
         {
             return _context.Pizza.Select(ListPizzaDTO.Create).ToList();
         }
-
-        
     } 
  }      

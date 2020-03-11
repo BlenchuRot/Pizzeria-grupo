@@ -2,6 +2,7 @@ using Pizzeria.DTO;
 using Pizzeria.Infraestructure;
 using Pizzeria.Dominio;
 using System;
+using Microsoft.EntityFrameworkCore;
 
 namespace Pizzeria.Application
 {
@@ -23,19 +24,9 @@ namespace Pizzeria.Application
             return ReadUserDTO.Create(user); //devuelve el usuario creado
         }
 
-        public User GetById(Guid id)
+         public User FindById(Guid id)
         {
-            return _context.User.Find(id);
+           return _context.User.Find(id);
         }
-
-        public ReadUserDTO FindId(Guid id)
-        {
-            throw new NotImplementedException();
-        }
-
-        public User FindById(object userId)
-        {
-            throw new NotImplementedException();
-        }
-    }
+   }
 }
